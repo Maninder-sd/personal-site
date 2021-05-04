@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+:root {
+  --text-color: #1C3E4A;
+  --primary-blue: #096486;
+}
+
+body {
+  background-color: #E9D8FC;
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+.navbar {
+  background-color: #F6F5F1;
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .logo .firstName, .navbar .logo .lastName {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.navbar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar .nav-list a {
+  text-decoration: none;
+  font-size: 1.7em;
+  color: var(--text-color);
+}
+/*# sourceMappingURL=index.css.map */
