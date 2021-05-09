@@ -144,30 +144,34 @@ body {
 
     background-color: var(--primary-blue);
     padding: 4em 5%;
+
     ul{
+        position: relative;
+        left: 20vw;
         padding: 0;
-        width: 70em;
+        width: 70vw;
         // background-color: black;
         list-style-type: none;
     }
     li{
+        box-shadow: 20px 15px 1px rgba(10,10,10,0.5);
         // margin:0em;
+        display: flex;
+        // height: auto;
+        // height:min-content;
+
         background-color: #E9D8FC;
         border-radius: 0.2em;
+        margin-bottom: 5em;
         // max-height: 40vh;
     }
     .skill-card{
-        height: 20em;
+        min-height: 20em;
         margin: 2em 3em;
         display: flex;
         // align-items: center;
-        img{
-            align-self: center;
-            // width: 100%;
-            // max-width: 30vw;
-            height: 80%;
-            margin: 2em;
-            cursor: pointer;
+        .text{
+            // height: 40em;
         }
         h1{
             font-size: 2.1em;
@@ -176,9 +180,15 @@ body {
             font-weight: normal;
             font-size: 1.4em;
         }
-        .text{
-            // display:grid;
+        img{
+            align-self: center;
+            width: 40%;
+            // max-width: 30vw;
+            // height: 80%;
+            margin: 2em;
+            cursor: pointer;
         }
+
         .learn-more{
             // background-color: var(--primary-blue);
             // display: flex;

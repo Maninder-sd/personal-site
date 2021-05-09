@@ -156,31 +156,30 @@ body {
 }
 
 .skills .container ul {
+  position: relative;
+  left: 20vw;
   padding: 0;
-  width: 70em;
+  width: 70vw;
   list-style-type: none;
 }
 
 .skills .container li {
+  -webkit-box-shadow: 20px 15px 1px rgba(10, 10, 10, 0.5);
+          box-shadow: 20px 15px 1px rgba(10, 10, 10, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #E9D8FC;
   border-radius: 0.2em;
+  margin-bottom: 5em;
 }
 
 .skills .container .skill-card {
-  height: 20em;
+  min-height: 20em;
   margin: 2em 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.skills .container .skill-card img {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  height: 80%;
-  margin: 2em;
-  cursor: pointer;
 }
 
 .skills .container .skill-card h1 {
@@ -190,6 +189,15 @@ body {
 .skills .container .skill-card h2 {
   font-weight: normal;
   font-size: 1.4em;
+}
+
+.skills .container .skill-card img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 40%;
+  margin: 2em;
+  cursor: pointer;
 }
 
 .skills .container .skill-card .learn-more a {
