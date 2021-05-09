@@ -81,21 +81,21 @@ body {
 }
 
 .hero .container{
-    margin: 1em 2em;
+    // margin: 1em 2em;
     display: grid;
     // max-height: 4.5em;
     grid-template-columns: 40% auto;
-    min-height: 100vh;
-    // align-items: center;
+    min-height: 45em;
+    align-items: center;
 
     .left-col{
         display: flex;
         justify-content: center;
-        align-items: center;
+        // align-items: center;
         img{
-            padding-top: 3em;
-            height: 40em;
-            width: auto;
+            width:100%;
+            max-width: 30vw;
+            height: auto;
         }
     }
     .right-col{
@@ -108,6 +108,77 @@ body {
             color: black;
             font-weight: normal;
             width: 90%;
+        }
+    }
+}
+
+
+
+
+.dark-box{
+    background-color: var(--dark-blue);
+    width: 5em;
+    height: 5em;
+    float: right;
+    position: relative;
+    top: -2.5em;
+    right: 5em;
+}
+
+.skills .container{
+
+    background-color: var(--primary-blue);
+    padding: 4em 5%;
+    ul{
+        padding: 0;
+        width: 70em;
+        // background-color: black;
+        list-style-type: none;
+    }
+    li{
+        // margin:0em;
+        background-color: #E9D8FC;
+        border-radius: 0.2em;
+        // max-height: 40vh;
+    }
+    .skill-card{
+        height: 20em;
+        margin: 2em 3em;
+        display: flex;
+        // align-items: center;
+        img{
+            align-self: center;
+            // width: 100%;
+            // max-width: 30vw;
+            height: 80%;
+            margin: 2em;
+            cursor: pointer;
+        }
+        h1{
+            font-size: 2.1em;
+        }
+        h2{
+            font-weight: normal;
+            font-size: 1.4em;
+        }
+        .text{
+            // display:grid;
+        }
+        .learn-more{
+            // background-color: var(--primary-blue);
+            // display: flex;
+            // justify-content: center;
+            // align-items: center ;
+            a{
+                background-color: var(--primary-blue);
+                color: #F2F2F2;
+                font-size: 1.4em;
+                text-decoration: none;
+                float: right;
+                padding: 0.2em;
+                // border-radius: 0.1em;
+            }
+            
         }
     }
 }

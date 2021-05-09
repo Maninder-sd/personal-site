@@ -91,12 +91,14 @@ body {
 }
 
 .hero .container {
-  margin: 1em 2em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40% auto;
       grid-template-columns: 40% auto;
-  min-height: 100vh;
+  min-height: 45em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero .container .left-col {
@@ -106,15 +108,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .hero .container .left-col img {
-  padding-top: 3em;
-  height: 40em;
-  width: auto;
+  width: 100%;
+  max-width: 30vw;
+  height: auto;
 }
 
 .hero .container .right-col {
@@ -131,5 +130,66 @@ body {
   color: black;
   font-weight: normal;
   width: 90%;
+}
+
+.dark-box {
+  background-color: var(--dark-blue);
+  width: 5em;
+  height: 5em;
+  float: right;
+  position: relative;
+  top: -2.5em;
+  right: 5em;
+}
+
+.skills .container {
+  background-color: var(--primary-blue);
+  padding: 4em 5%;
+}
+
+.skills .container ul {
+  padding: 0;
+  width: 70em;
+  list-style-type: none;
+}
+
+.skills .container li {
+  background-color: #E9D8FC;
+  border-radius: 0.2em;
+}
+
+.skills .container .skill-card {
+  height: 20em;
+  margin: 2em 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.skills .container .skill-card img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 80%;
+  margin: 2em;
+  cursor: pointer;
+}
+
+.skills .container .skill-card h1 {
+  font-size: 2.1em;
+}
+
+.skills .container .skill-card h2 {
+  font-weight: normal;
+  font-size: 1.4em;
+}
+
+.skills .container .skill-card .learn-more a {
+  background-color: var(--primary-blue);
+  color: #F2F2F2;
+  font-size: 1.4em;
+  text-decoration: none;
+  float: right;
+  padding: 0.2em;
 }
 /*# sourceMappingURL=index.css.map */
