@@ -64,6 +64,10 @@ body {
   color: white;
 }
 
+.navbar .nav-list a:hover {
+  color: var(--primary-blue);
+}
+
 .navbar .nav-list .page-tracker {
   display: block;
 }
@@ -81,6 +85,10 @@ body {
   color: white;
   position: relative;
   top: 0.3em;
+}
+
+.navbar .nav-list .page-tracker .cur-page:hover {
+  color: var(--primary-blue);
 }
 
 .navbar .nav-list .column-btn {
