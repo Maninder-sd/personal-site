@@ -4,10 +4,11 @@
   --text-color: #1C3E4A;
   --primary-blue: #096486;
   --dark-blue:  #122830;
+  --background-color: #F2F2F2;
 }
 
 body {
-  background-color: #E9D8FC;
+  background-color: var(--background-color);
   font-family: 'Montserrat';
   margin: 0;
 }
@@ -119,6 +120,8 @@ body {
 }
 
 .hero .container .left-col img {
+  padding-bottom: 1em;
+  padding-top: 1em;
   width: 100%;
   max-width: 30vw;
   height: auto;
@@ -169,7 +172,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #E9D8FC;
+  background-color: var(--background-color);
   border-radius: 0.2em;
   margin-bottom: 5em;
 }
@@ -206,6 +209,182 @@ body {
   font-size: 1.4em;
   text-decoration: none;
   float: right;
-  padding: 0.2em;
+  padding: 0.3em;
+  border-radius: 0.1em;
+}
+
+.contacts .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts .container .contact-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 20px 15px 4px black;
+          box-shadow: 20px 15px 4px black;
+  background-color: white;
+  width: 60vw;
+  margin: 5em 0;
+  padding: 5em 5vw 2em 5vw;
+}
+
+.contacts .container h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.1em;
+  font-weight: 600;
+}
+
+.contacts .container h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em;
+  width: 60%;
+  font-weight: normal;
+  padding-left: 2.2em;
+  padding-top: 1.5em;
+}
+
+.contacts .container .contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 2em;
+  padding-left: 10em;
+}
+
+.contacts .container .contact-info h2 {
+  display: none;
+}
+
+.contacts .container .contact-info img {
+  height: 10em;
+}
+
+.contacts .container .contact-info .right-col {
+  padding-left: 5em;
+}
+
+.contacts .container .contact-info .right-col h3 {
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+.contacts .container .contact-info .right-col .social-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts .container .contact-info .right-col .social-buttons a {
+  margin-right: 3em;
+}
+
+.contacts .container .contact-info .right-col .social-buttons a img {
+  height: 3em;
+  border-radius: 0.5em;
+}
+
+.contacts .container .contact-info .right-col .social-buttons .resume {
+  text-decoration: none;
+  height: 3em;
+  border-radius: 0.5em;
+  background-color: #808080;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts .container .contact-info .right-col .social-buttons .resume h1 {
+  font-size: 1.4em;
+  font-weight: normal;
+  color: white;
+  padding: 0 0.4em 0 0.4em;
+}
+
+.footer {
+  height: 5em;
+  background-color: var(--dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer h1 {
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  font-size: 0.7em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .contacts .container .contact-card h2 {
+    display: none;
+  }
+  .contacts .container .contact-card .contact-info {
+    padding: 0;
+    padding-top: 3em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts .container .contact-card .contact-info h2 {
+    text-align: center;
+    display: unset;
+    width: 100%;
+  }
+  .contacts .container .contact-card .contact-info .soccer {
+    height: auto;
+    width: 15em;
+  }
+  .contacts .container .contact-card .contact-info .right-col {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts .container .contact-card .contact-info .right-col .social-buttons a {
+    margin-right: 0;
+    margin: 1em;
+  }
 }
 /*# sourceMappingURL=index.css.map */
