@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cumc2020.css">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            processEscapes: true
+          }
+        });
+      </script>
+          
+      <script type="text/javascript"
+              src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      </script>  
+
+<title>CUMC 2020</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a class="firstName" href="../index.html">Maninder</a>
+            <a class="lastName" href="../index.html">Dhanauta</a>
+        </div>
+    </div>
+
+
+    <!-- <div class="leftbar"></div>
+
+    <div class="rightbar"></div> -->
+
+    <section class="intro">
+        <h1>Continued Fractions: How to Understand Self-Similar and Infinite Processes (CUMC 2020)</h1>
+           
+        <div class="container">
+            <h2>
+                During the summer of 2020, I attended my first ever Math Conference. The <a href="https://cumc.math.ca/" target="_blank"> Canadian Undergraduate Mathematics Conference </a> is an annual event held by undergrads with an interest in mathematics. Everything was virtual but the experience was still memorable. I made new friends from other provinces and connected with people that shared a common interest. I chose to present a talk for the 4 day conference and now, after a year, I've decided to make a revision and put it on the Internet. The purpose of the talk is to use Continued Fractions as an analogy to understand infinite processes, which can be surprisingly non-intuitive. Included is a video presentation followed by written material.
+            </h2>
+            <!-- <img src="./ytholder.png" alt=""> -->
+            <iframe class="video"   src="https://www.youtube.com/embed/yuREScvud_I" frameborder="0"></iframe>
+            <a class="pdf-button" href="#"> Infinity_and_CF_Maninder.pdf</a>
+        </div>
+
+    </section>
+
+    <section class="paper">
+        <div class="container">
+            <iframe id="iframe" src="./cumc2020_code.html" 
+            onload="resizeIframe()"
+            frameborder="0" ></iframe>
+        </div>
+
+    </section>
+
+<section class="footer">
+    <h1>
+        Copyright &copy; 2021 Maninder Dhanauta | The materials may be referenced for educational purposes
+    </h1>
+</section>
+
+<script type="text/javascript">
+    function resizeIframe() {
+        const iframe = document.getElementById('iframe')
+        iframe.height = iframe.contentWindow.document.body.scrollHeight + 50 + "px";
+    }
+
+    // (windows).on("resize", resizeIframe)
+    window.addEventListener('resize', resizeIframe);
+
+</script> 
+
+
+
+</body>
+</html>
