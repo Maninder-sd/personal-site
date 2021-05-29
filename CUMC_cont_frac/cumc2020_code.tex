@@ -1,0 +1,245 @@
+\documentclass[psamsfonts]{amsart}
+
+%-------Packages---------
+\usepackage{amssymb,amsfonts}
+\usepackage[all,arc]{xy}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+
+%--------Theorem Environments--------
+%theoremstyle{plain} --- default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{quest}[thm]{Question}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{defns}[thm]{Definitions}
+\newtheorem{con}[thm]{Construction}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmps}[thm]{Examples}
+\newtheorem{notn}[thm]{Notation}
+\newtheorem{notns}[thm]{Notations}
+\newtheorem{addm}[thm]{Addendum}
+\newtheorem{exer}[thm]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{rems}[thm]{Remarks}
+\newtheorem{warn}[thm]{Warning}
+\newtheorem{sch}[thm]{Scholium}
+
+\makeatletter
+\let\c@equation\c@thm
+\makeatother
+\numberwithin{equation}{section}
+
+\bibliographystyle{plain}
+
+%--------Meta Data: Fill in your info------
+\title{Continued Fractions: How to Understand Self-Similar and Infinite Processes (CUMC 2020)}
+
+\author{Maninder Dhanauta}
+
+\begin{document}
+
+\begin{abstract}
+
+Imagine the most dreaded math chapter from middle school and the concept that is least understood in high school and now combine the two. The infinite continued fraction is the result of placing fractions within fractions indefinitely. These fractions make appearances in math contests to highlight tricks for manipulating self-similar, infinite processes. However, these tricks make problematic assumptions that can lead to paradoxes. This talk will use continued fractions to highlight the non-intuitive nature of self-similar, infinite processes. A motivated method to approach these processes is provided. The talk includes recursive definitions of these processes and epsilon-delta style proofs. The talk ends by introducing continued fractions as an analytical theory and some interesting theorems are also discussed.
+
+
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+
+\newpage
+\section{What is a Continued Fraction?}
+
+Continued Fractions come in many different flavours. There is an entire theory based off continued fractions and they where used by many great mathematicians in a variety of work in number theory and other areas of mathematics. Qualitatively, a continued fractions are objects that are generally described as fractions within fractions. 
+
+\begin{exmp}Here a some examples \\
+
+    $
+          b_0 + \dfrac{a_1}{b_1 + \dfrac{a_2}{b_2 + \dfrac{a_3}{b_3 +  \dfrac{a_4}{b_4 + ...}}}}  
+$
+    and tan(x) =
+    $
+          \dfrac{x}{1+  \dfrac{-x^2}{3+  \dfrac{-x^2}{5+  \dfrac{-x^2}{7+... }}}}
+    $
+\end{exmp}
+
+As you can see, the numerators and denominators of continued fractions can be more than numbers. They can have variables and can express functions. An interesting fun fact, mathematician Johann Heinrich Lambert was the first to prove that Pi was a irrational number by using the continued fraction expansion of the function tan(x). For this discussion, we consider a restricted definition of the Continued Fraction.
+
+\begin{defn} Simple Continued Fraction
+
+          A simple continued fraction is an infinite continued fraction which has 1's for its \textit{partial numerators}  and  positive integers for its \textit{partial denominators}
+    
+    $$ a_0 + \dfrac{1}{a_1 + \dfrac{1}{a_2 + \dfrac{1}{a_3 + ...}}}$$
+
+    where $a_i \in \mathbb{N}$
+
+\end{defn}
+
+There is a definition called the general continued fraction where partial numerators and denominators can be any integer (positive or negative). To add more variety, continued fractions have also been defined as compositions of linear transformations. The focus of this talk is not CF but rather to use CF as an example of infinite processes. So we restrict the definition.
+
+
+\section{Simplest Continued Fraction }
+
+We want an example of a continued fraction, so lets write down the simplest Simple Continued Fractions we could possibly have. It will consist of all 1's.
+
+If this is your first time seeing a continued fraction, I recommend trying to write out this continued fraction with pen and paper. Make sure not to peek at the typesetting of the fraction below.
+
+$$1+\dfrac{1}{1+ \dfrac{1}{1+ \dfrac{1}{1+ \dfrac{1}{1+ ...}}}}$$
+
+How do we make sense of this fraction? The CF is a hard object to wrap your head around, its self similar. If you tried writing out the fraction, you probably felt unsatisfied because where ever you would stop to place the 3 dots, something would feel incomplete (at least it did for me!). We can try to make sense of the fractions by figuring out what it equals to. Is there a way to evaluate this expression so we can get a nice and easy real number we could write out? The answer is yes. We let A to be equal to the expression and observe a self similar nature of A.\\
+
+Let $A = 1+\dfrac{1}{1+ \dfrac{1}{1+ ...}} \implies A=1+\dfrac{1}{A} \implies A^2-A-1=0  $\\
+
+Notice that A is self-similar because there is another A in the denominator. This reduced to solving a quadratic equation. We get
+$$ A = \dfrac{1\pm \sqrt{5}}{2}$$
+A reasonable assumption is that A is positive, so we consider the positive root $A = \frac{1 + \sqrt{5}}{2}$ only. The trick used here is very clever and is commonly used in high school math contests to quickly evaluate self-similar expressions (I personally used it multiple times without a second thought). However, we did not provide any justification as to why it is a valid trick. As it turns out, it is not always valid. Furthermore, this trick cannot be used to evaluate expressions that are not self similar and so it is limited.\\
+
+An interesting coincidence we can see is that A is actually equal to the Golden ratio, $A = \phi =\frac{1 + \sqrt{5}}{2}$. There is one more connection I want to make with this continued fraction. Suppose we approach the evaluation of this expression in a different way. We can truncate the expression at finite lengths and take the limit of the truncation. This approach may be more obvious than the previous trick. These truncations are known as the \textit{nth convergents}. Here is a table of some of the convergents of A:\\
+
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c|c|c| } 
+\hline
+convergents & $A_1$ & $A_2$ & $A_3$ & $A_4$ & $A_5$\\
+\hline
+
+
+expression & $1$ & $1 + \dfrac{1}{1}$ & $1 + \dfrac{1}{1 + \dfrac{1}{1}}$ & $1 + \dfrac{1}{1 + \dfrac{1}{1+\dfrac{1}{1}}}$ & $1 + \dfrac{1}{1 + \dfrac{1}{1+\dfrac{1}{1+\dfrac{1}{1}}}}$ \\ 
+
+\hline
+evaluation & $\dfrac{1}{1}$ & $\dfrac{2}{1}$ & $\dfrac{3}{2}$ & $\dfrac{5}{3}$ & see below
+\\ 
+\hline
+\end{tabular}
+\end{center}
+
+Although evaluating each convergent seems to get increasingly difficult, we can use previous calculations to find the next convergent. Notice  $A_5 = 1 + 1/A_4 = 1+ 3/5 = 8/5$. This is important because if a convergent is $A_n = \frac{p}{q} $, the next two convergents are $A_{n+1} = \frac{p+q}{p}$ and $A_{n+2} = \frac{2p+q}{p+q}$. We make 2 important observations,
+
+\begin{enumerate}
+    \item The denominator of  $A_{n+2}$ is the sum of the previous 2 denominators 
+    \item The numerator of  $A_{n+2}$  is the sum of the previous 2 numerators
+\end{enumerate}
+Is there a sequence that follows this pattern? Yes, the Fibonacci numbers! As a matter of fact, the nth convergent is the ratio between 2 consecutive Fibonacci numbers. Since we evaluated A to be the Golden ratio, what we just shown is that the ratio between consecutive Fibonacci numbers tends to the Golden ratio. Symbolically,
+$$ \lim_{n \to \infty} \dfrac{fib_{n+1}}{fib_{n}} = \phi = \dfrac{1+\sqrt{5}}{2}$$
+We see how just by studying the "Simplest" continued fractions we were able to discover a lot of mathematics. Clearly there is something interesting going on with continued fractions.
+
+\section{When Infinity Becomes Tricky}
+
+There is an issue with the trick introduced in the last section. Although it is elegant, it makes the assumption that the expression converges. If the expression does not converge, the value of A is useless. Here is a classic example of when this trick fails.
+
+\begin{exmp} Sum of a Geometric Series
+
+Let $A = (1 + 2 + 4 +8+...)$ \\
+$$A = 1+2(1 + 2 + 4 +8+...) \implies A=1+2A \implies A= - \frac{1}{2}$$
+    
+\end{exmp}
+
+The good thing is the trick works if the object we are studying converges. So if we show the Continued Fraction converges, we can use the trick, right? Well, we have one more complication that is specific to Continued Fractions.
+
+\begin{exmp} Converges to different values\\
+Recall that we are working with Simple Continued Fractions. For this example, we broaden our definition of Continued Fractions. Consider the following equalities.\\
+$$1 = \frac{2}{3-(1)} = \frac{2}{3-\frac{2}{3-(1)}} = \frac{2}{3-\frac{2}{3-\frac{2}{3-...}}}$$
+$$2 = \frac{2}{3-(2)} = \frac{2}{3-\frac{2}{3-(2)}} = \frac{2}{3-\frac{2}{3-\frac{2}{3-...}}}$$
+\end{exmp}
+It is true that at every finite step in the equalities hold. For this reason, it seems as if the same Continued Fraction converges to 2 values, meaning that 1=2. This cannot be true. How can we resolve this issue? We need to first pinpoint where the issues are arising from.
+
+
+\section{Fixing the Infinity Problem}
+The previous section highlighted examples that exposed gaps in our understanding of the Continued Fractions. We will try to fill in the gaps by trying to make our treatment of Continued Fractions more rigorous. Here are some points to keep in mind.
+
+\begin{enumerate}
+    \item \textbf{Significance of the "seed value"}\\
+    Intuition first suggests that the fractions may not be equal because of the different "seed". The first expression is seeded by 1 while the second is seeded by 2. We can come to expect different behaviours for this same Continued Fraction with different seed values. 
+    \textbf{\item Defining a Limiting Process}\\
+    Let us try using the trick here despite not having proven convergence:\\
+    $$A=\frac{2}{3-A} \implies A^2 - 3A +2=0 \implies A=1,A=2$$
+    This does not help us much since both roots are viable solutions. We turn to our second approach, the limit of nth convergents. We say that the limit of the nth convergent is equal to the continued expression. The point is that we associate an exact definition with our infinite process. Similar to "seed values", we can expect different behaviours for the same Continued Fraction with different definitions.
+    \textbf{ \item Exact definition of Convergence}\\
+    The final piece of the puzzle is to define when the limiting process converges. Even though we have a process to express the continued fraction, we have not defined when we are allowed to say that it converges to a real value. We will rely on the usual Epsilon-Delta definition of convergence. As with the previous 2 point, we can expect different behaviours for the same Continued Fraction with different definitions of convergence.
+\end{enumerate}
+
+
+If we take the points made above as a checklist, by making sure we define a seed, limiting process, and definition of Convergence, we can be confident that we will not run into the issues of the last section. The discussion made in (2) and (3) are important and come up in mathematics whenever infinity enters the picture. They can also be the source of non-intuitive results that mathematicians seem to accept as true. Try to think of some instances where you've come across something like this.\\ 
+
+The point made in (1) is more specific to the rest of this paper, I need it so we can define our own accept limiting process for Continued Fraction. The accepted limiting process for CFs is the nth convergent, and it can be seen as a top-down definition of the CF. We will construct a bottom-up approach to define CF. This is to avoid unnecessary notation. Luckly, in the example below, they will both be equivalent. We are now ready to formally prove the convergence of $1+\frac{1}{1+...}$
+
+\begin{defn} .\\
+The Continued Fraction of $1+\dfrac{1}{1+ \dfrac{1}{1+...}}$ is defined as: \\
+\begin{enumerate}
+    \item $a_1=1$ (seed value)
+    \item $a_n = 1+ \frac{1}{a_{n-1}}$ for $n>1$ (limiting process)
+\end{enumerate}
+This definition is hardly generalizable to all CFs\footnotemark  but as long as we can accept it, that will make it sufficient for this discussion. 
+
+\end{defn}
+
+
+\footnotetext{
+If we attempt to define the CF $1+ \frac{1}{2+\frac{1}{3+...}}$ with partial denominators being 1,2,3,4,... in a similar way, we run into the issue of defining the seed. This is why it is generally accepted to truncate the fraction from the top rather than the bottom. However, truncating from the top makes the recursive definition of the limiting process complicated. In the example above, the self similarity results in both truncations being identical, which saves us a lot of work.
+
+
+}
+
+\begin{exmp} Prove convergence of $1+\frac{1}{1+...}$ is Golden ratio\\
+\begin{proof}.\\
+
+Let $\epsilon >0$. 
+Choose $N = - \log_{\phi} \epsilon >0$ (whenever $\epsilon <1$ ). Let $n>N$,\\
+w.t.s: $|a_n-\phi|<\epsilon$\\
+
+Consider,\\
+\begin{align*}
+     | \dfrac{a_n - \phi}{a_{n-1} - \phi} | 
+&=| \dfrac{  (1+\dfrac{1}{a_{n-1}  }) - (1+\dfrac{1}{\phi  })}{a_{n-1} - \phi} |  
+\text{ ; using def of  } a_n \text{ and identity of } \phi\\
+&= |\dfrac{1}{\phi a_{n-1}}| \text{ ; simplified expression} \\
+&\leq \dfrac{1}{\phi} \text{ ; since for all k, } a_k \geq 1 
+\end{align*}
+
+So,
+\begin{align*}
+    | \dfrac{a_n - \phi}{a_{n-1} - \phi} | &\leq \dfrac{1}{\phi} \\
+    \implies |a_n - \phi| &\leq \dfrac{1}{\phi} |a_{n-1} - \phi| \\
+    \implies |a_n - \phi| &\leq \dfrac{1}{\phi^{n-1}} |a_{1} - \phi| \\
+    &= \dfrac{1}{\phi^{n-1}} |1 - \phi| \\
+    &= \phi^{-n} < \phi^{-N} = \epsilon \\
+\end{align*}
+
+\end{proof}
+
+\end{exmp}
+
+
+In the last part of the proof, qualitatively, we bound expression in $a_n$ with an expression in $a_{n-1}$ and a factor of $1/\phi$. We can further bound all $a_k$'s by reducing the index of $a_k$ and multiplying a factor of $1/\phi$. In the 2nd last line, I use the identity $\phi = 1+ 1/\phi$. 
+
+\section{Summary}
+
+It is hard to wrap your head around infinite processes. When trying to ask questions about the evaluation of an infinite process or the equality between 2 infinite processes, following seemingly valid operations can lead to contradictions. Our unconscious assumptions try to fill in the gaps in our understanding of infinity. Continued fractions are used as an analogy to demonstrate what it takes to fill in these gaps using mathematical rigour. We should approach all mathematical ideas involving infinity with this new mindset and think critically about the assumptions we make.
+
+\begin{thebibliography}{9}
+
+\bibitem{ITN}
+Niven, I., 
+Zuckerman, H. S., 
+Montgomery, H. L. (1991).
+An introduction to the theory of numbers Ch-7. New York: Wiley.
+
+
+\bibitem{mathologer_video} \href{https://www.youtube.com/watch?v=CaasbfdJdJg&t=80s&ab_channel=Mathologer}{Mathologer Youtube Video, Infinite fractions and the most irrational number}
+
+\end{thebibliography}
+
+\end{document}
+
