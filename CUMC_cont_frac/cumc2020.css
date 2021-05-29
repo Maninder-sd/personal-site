@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+:root {
+  --text-color: #1C3E4A;
+  --primary-blue: #096486;
+  --dark-blue:  #122830;
+  --background-color: #F2F2F2;
+  --paper-color: whitesmoke;
+  --intro-color:white;
+  --title-color: white;
+  --bar-color: var(--dark-blue)
+;
+}
+
+body {
+  background-color: white;
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+.navbar {
+  background-color: var(--dark-blue);
+  padding: 1em;
+  display: -ms-grid;
+  display: grid;
+  min-height: 2.5em;
+}
+
+.navbar .logo {
+  text-align: center;
+}
+
+.navbar .logo .firstName, .navbar .logo .lastName {
+  font-family: 'Merriweather';
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 2.1em;
+}
+
+.navbar .logo .lastName {
+  padding-left: 0.2em;
+}
+
+.leftbar, .rightbar {
+  background-color: var(--bar-color);
+  width: 10%;
+  height: 335em;
+  top: 50em;
+  position: relative;
+}
+
+.leftbar {
+  float: left;
+}
+
+.rightbar {
+  float: right;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro .container {
+  background-color: var(--intro-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro h1 {
+  background-color: var(--title-color);
+  font-weight: normal;
+  text-align: center;
+  font-size: 2em;
+  padding: 0.5em;
+}
+
+.intro h2 {
+  font-weight: 400;
+  font-size: 1em;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.intro .video {
+  padding: 1em;
+  width: 56vw;
+  height: 31vw;
+  max-width: 40em;
+  max-height: 22em;
+}
+
+.intro .pdf-button {
+  background-color: grey;
+  padding: 0.5em;
+  color: white;
+  border-radius: 0.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-decoration: none;
+}
+
+.paper {
+  background-color: var(--dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.paper .container {
+  background-color: white;
+  width: 50em;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.paper iframe {
+  width: 100%;
+  background-color: whitesmoke;
+  overflow: scroll;
+}
+
+.paper h1 {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.footer {
+  height: 2em;
+  background-color: var(--dark-blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer h1 {
+  text-align: center;
+  font-weight: normal;
+  color: white;
+  font-size: 0.7em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .leftbar, .rightbar {
+    display: none;
+  }
+  .paper {
+    background-color: var(--dark-blue);
+  }
+  .paper .container {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .leftbar, .rightbar {
+    display: none;
+  }
+  .paper {
+    background-color: var(--dark-blue);
+  }
+  .paper .container {
+    padding: 0;
+  }
+  .intro h2 {
+    display: none;
+  }
+}
+/*# sourceMappingURL=cumc2020.css.map */

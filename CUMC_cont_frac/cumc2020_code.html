@@ -1,0 +1,726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Continued Fractions: How to Understand Self-Similar and Infinite Processes (CUMC
+2020)</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (https://tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="cumc2020_code.tex"> 
+<link rel="stylesheet" type="text/css" href="cumc2020_code.css"> 
+</head><body 
+>
+  <div class="maketitle">
+  <h2 class="titleHead">
+CONTINUED FRACTIONS: HOW TO UNDERSTAND
+SELF-SIMILAR AND INFINITE PROCESSES (CUMC 2020)
+  </h2>
+  <div class="authors"><span class="author" >
+<span 
+class="cmr-8">MANINDER DHANAUTA</span>
+  </span></div>
+         <div class="abstract">
+       <!--l. 50--><p class="noindent" ><span class="title">
+       <span 
+class="cmcsc-10x-x-80">A<span 
+class="small-caps">b</span><span 
+class="small-caps">s</span><span 
+class="small-caps">t</span><span 
+class="small-caps">r</span><span 
+class="small-caps">a</span><span 
+class="small-caps">c</span><span 
+class="small-caps">t</span>.</span> </span>
+       <!--l. 52--><p class="indent" >    <span 
+class="cmr-8">Imagine  the  most  dreaded  math  chapter  from  middle  school  and  the</span>
+       <span 
+class="cmr-8">concept that is least understood in high school and now combine the two. The</span>
+       <span 
+class="cmr-8">infinite continued fraction is the result of placing fractions within fractions</span>
+       <span 
+class="cmr-8">indefinitely. These fractions make appearances in math contests to highlight</span>
+       <span 
+class="cmr-8">tricks for manipulating self-similar, infinite processes. However, these tricks</span>
+       <span 
+class="cmr-8">make problematic assumptions that can lead to paradoxes. This talk will use</span>
+       <span 
+class="cmr-8">continued fractions to highlight the non-intuitive nature of self-similar, infinite</span>
+       <span 
+class="cmr-8">processes. A motivated method to approach these processes is provided. The</span>
+       <span 
+class="cmr-8">talk includes recursive definitions of these processes and epsilon-delta style</span>
+       <span 
+class="cmr-8">proofs. The talk ends by introducing continued fractions as an analytical theory</span>
+       <span 
+class="cmr-8">and some interesting theorems are also discussed.</span>
+</div>
+<div class="submaketitle">
+</div>
+  </div>
+  <h3 class="sectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+  <div class="tableofcontents"><span class="sectionToc" ><a 
+href="#x1-1000" id="QQ2-1-1">Contents</a></span><br /><span class="sectionToc" >&#x00A0;1.&#x00A0;&#x00A0;<a 
+href="#x1-20001" id="QQ2-1-2">What is a Continued Fraction?</a></span><br /><span class="sectionToc" >&#x00A0;2.&#x00A0;&#x00A0;<a 
+href="#x1-30002" id="QQ2-1-3">Simplest Continued
+Fraction  </a></span><br /><span class="sectionToc" >&#x00A0;3.&#x00A0;&#x00A0;<a 
+href="#x1-40003" id="QQ2-1-4">When  Infinity  Becomes  Tricky</a></span><br /><span class="sectionToc" >&#x00A0;4.&#x00A0;&#x00A0;<a 
+href="#x1-50004" id="QQ2-1-5">Fixing  the  Infinity
+Problem</a></span><br /><span class="sectionToc" >&#x00A0;5.&#x00A0;&#x00A0;<a 
+href="#x1-60005" id="QQ2-1-6">Summary</a></span><br /><span class="sectionToc" ><a 
+href="#x1-70005" id="QQ2-1-7">References</a></span><br />
+  </div>
+<!--l. 62--><p class="indent" >
+                                                                     
+
+                                                                     
+  <h3 class="sectionHead"><span class="titlemark">1. </span> <a 
+ id="x1-20001"></a>What is a Continued Fraction?</h3>
+<!--l. 65--><p class="noindent" >Continued Fractions come in many different flavours. There is an entire theory based off
+continued fractions and they where used by many great mathematicians in a variety
+of work in number theory and other areas of mathematics. Qualitatively, a
+continued fractions are objects that are generally described as fractions within
+fractions.
+  <div class="newtheorem">
+<!--l. 67--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2001r1"></a>
+<span 
+class="cmbx-10">Example 1.1.</span>  </span>Here a some examples <br 
+class="newline" />
+<!--l. 69--><p class="indent" >  <span 
+class="cmmi-10">b</span><sub><span 
+class="cmr-7">0</span></sub> + <img 
+src="cumc2020_code0x.png" alt="        a
+---------1a2-------
+b1 +--------a3-----
+    b2 + b +--a4--
+         3  b4 +..." > and tan(x) = <img 
+src="cumc2020_code1x.png" alt="       x
+----------2------
+1+ ------x--2---
+   3+  ----x----
+       5+ -- x2
+          7+ ..." >
+  </div>
+<!--l. 76--><p class="indent" >
+<!--l. 78--><p class="indent" >  As you can see, the numerators and denominators of continued fractions can be more
+than numbers. They can have variables and can express functions. An interesting fun
+fact, mathematician Johann Heinrich Lambert was the first to prove that Pi was a
+irrational number by using the continued fraction expansion of the function
+tan(x). For this discussion, we consider a restricted definition of the Continued
+Fraction.
+  <div class="newtheorem">
+<!--l. 80--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2002r2"></a>
+<span 
+class="cmbx-10">Definition 1.2.</span>  </span>Simple Continued Fraction
+<!--l. 82--><p class="indent" >  A simple continued fraction is an infinite continued fraction which has 1&#8217;s for its
+<span 
+class="cmti-10">partial numerators </span>and positive integers for its <span 
+class="cmti-10">partial denominators</span>
+<!--l. 84--><p class="indent" >
+  <div class="math-display" >
+<img 
+src="cumc2020_code2x.png" alt="a0 + -------1--------
+     a + -----1-----
+      1  a + ---1--
+          2  a3 + ...
+" class="math-display" ></div>
+<!--l. 86--><p class="indent" >  where <span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">i</span></sub> <span 
+class="cmsy-10">&#x2208; </span><span 
+class="msbm-10">&#x2115;</span>
+  </div>
+<!--l. 88--><p class="indent" >
+<!--l. 90--><p class="indent" >  There is a definition called the general continued fraction where partial numerators
+and denominators can be any integer (positive or negative). To add more variety,
+continued fractions have also been defined as compositions of linear transformations. The
+focus of this talk is not CF but rather to use CF as an example of infinite processes. So
+we restrict the definition.
+  <h3 class="sectionHead"><span class="titlemark">2. </span> <a 
+ id="x1-30002"></a>Simplest Continued Fraction </h3>
+<!--l. 95--><p class="noindent" >We want an example of a continued fraction, so lets write down the simplest Simple
+Continued Fractions we could possibly have. It will consist of all 1&#8217;s.
+<!--l. 97--><p class="indent" >  If this is your first time seeing a continued fraction, I recommend trying to write out
+this continued fraction with pen and paper. Make sure not to peek at the typesetting of
+the fraction below.
+<!--l. 99--><p class="indent" >
+  <div class="math-display" >
+<img 
+src="cumc2020_code3x.png" alt="1 + -------1---------
+    1+ ------1------
+       1 + ----1----
+           1+ --1--
+              1 +...
+" class="math-display" ></div>
+<!--l. 101--><p class="indent" >  How do we make sense of this fraction? The CF is a hard object to wrap your head
+around, its self similar. If you tried writing out the fraction, you probably felt unsatisfied
+because where ever you would stop to place the 3 dots, something would feel
+incomplete (at least it did for me!). We can try to make sense of the fractions by
+figuring out what it equals to. Is there a way to evaluate this expression so we
+can get a nice and easy real number we could write out? The answer is yes.
+We let A to be equal to the expression and observe a self similar nature of
+A.<br 
+class="newline" />
+<!--l. 103--><p class="indent" >  Let <span 
+class="cmmi-10">A </span>= 1 + <img 
+src="cumc2020_code4x.png" alt="----1----
+1 + --1--
+    1+ ..." > <img 
+src="cumc2020_code5x.png" alt="=&#x21D2;"  class="Longrightarrow" > <span 
+class="cmmi-10">A </span>= 1 + <img 
+src="cumc2020_code6x.png" alt="-1
+A" > <img 
+src="cumc2020_code7x.png" alt="=&#x21D2;"  class="Longrightarrow" > <span 
+class="cmmi-10">A</span><sup><span 
+class="cmr-7">2</span></sup> <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">- </span>1 = 0<br 
+class="newline" />
+<!--l. 105--><p class="indent" >  Notice that A is self-similar because there is another A in the denominator. This
+reduced to solving a quadratic equation. We get
+  <div class="math-display" >
+<img 
+src="cumc2020_code8x.png" alt="       &#x221A; -
+A = 1-±--5
+       2
+" class="math-display" ></div>
+<!--l. 107--><p class="indent" >  A reasonable assumption is that A is positive, so we consider the positive root
+<span 
+class="cmmi-10">A </span>= <img 
+src="cumc2020_code9x.png" alt="  &#x221A; -
+1+2-5"  class="frac" align="middle"> only. The trick used here is very clever and is commonly used in high school
+math contests to quickly evaluate self-similar expressions (I personally used it multiple
+times without a second thought). However, we did not provide any justification as to why
+it is a valid trick. As it turns out, it is not always valid. Furthermore, this trick
+cannot be used to evaluate expressions that are not self similar and so it is
+limited.<br 
+class="newline" />
+<!--l. 109--><p class="indent" >  An interesting coincidence we can see is that A is actually equal to the Golden ratio,
+<span 
+class="cmmi-10">A </span>= <span 
+class="cmmi-10">&#x03D5; </span>= <img 
+src="cumc2020_code10x.png" alt="   -
+1+&#x221A;5
+  2"  class="frac" align="middle">. There is one more connection I want to make with this continued
+fraction. Suppose we approach the evaluation of this expression in a different way. We
+can truncate the expression at finite lengths and take the limit of the truncation. This
+approach may be more obvious than the previous trick. These truncations are
+known as the <span 
+class="cmti-10">nth convergents</span>. Here is a table of some of the convergents of
+A:<br 
+class="newline" />
+<div class="center" 
+>
+<!--l. 112--><p class="noindent" >
+<div class="tabular"> <table id="TBL-1" class="tabular" 
+ 
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><colgroup id="TBL-1-3g"><col 
+id="TBL-1-3"></colgroup><colgroup id="TBL-1-4g"><col 
+id="TBL-1-4"></colgroup><colgroup id="TBL-1-5g"><col 
+id="TBL-1-5"></colgroup><colgroup id="TBL-1-6g"><col 
+id="TBL-1-6"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-1"  
+class="td11">convergents</td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-2"  
+class="td11"><span 
+class="cmmi-10">A</span><sub><span 
+class="cmr-7">1</span></sub></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-3"  
+class="td11"> <span 
+class="cmmi-10">A</span><sub><span 
+class="cmr-7">2</span></sub>  </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-4"  
+class="td11">   <span 
+class="cmmi-10">A</span><sub><span 
+class="cmr-7">3</span></sub>      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-5"  
+class="td11">     <span 
+class="cmmi-10">A</span><sub><span 
+class="cmr-7">4</span></sub>          </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-1-6"  
+class="td11">       <span 
+class="cmmi-10">A</span><sub><span 
+class="cmr-7">5</span></sub>             </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-1"  
+class="td11"> expression </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-2"  
+class="td11"> 1 </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-3"  
+class="td11">1 + <img 
+src="cumc2020_code11x.png" alt="1
+1" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-4"  
+class="td11">1 + <img 
+src="cumc2020_code12x.png" alt="--1--
+1+  1
+    1" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-5"  
+class="td11">1 + <img 
+src="cumc2020_code13x.png" alt="----1----
+1 + --1--
+       1
+    1+ 1" ></td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-2-6"  
+class="td11">1 + <img 
+src="cumc2020_code14x.png" alt="-----1-------
+1+ ----1----
+       -1---
+   1+     1
+       1+ 1" ></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-1"  
+class="td11"> evaluation </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-2"  
+class="td11"><img 
+src="cumc2020_code15x.png" alt="1
+1" > </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-3"  
+class="td11">  <img 
+src="cumc2020_code16x.png" alt="2
+1" >   </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-4"  
+class="td11">    <img 
+src="cumc2020_code17x.png" alt="3
+2" >      </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-5"  
+class="td11">     <img 
+src="cumc2020_code18x.png" alt="5
+3" >        </td><td  style="white-space:nowrap; text-align:center;" id="TBL-1-3-6"  
+class="td11">    see below      </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:nowrap; text-align:center;" id="TBL-1-4-1"  
+class="td11">          </td></tr></table></div></div>
+                                                                     
+
+                                                                     
+<!--l. 128--><p class="indent" >  Although evaluating each convergent seems to get increasingly difficult, we can use
+previous calculations to find the next convergent. Notice <span 
+class="cmmi-10">A</span><sub><span 
+class="cmr-7">5</span></sub> = 1 + 1<span 
+class="cmmi-10">&#x2215;A</span><sub><span 
+class="cmr-7">4</span></sub> = 1 + 3<span 
+class="cmmi-10">&#x2215;</span>5 = 8<span 
+class="cmmi-10">&#x2215;</span>5.
+This is important because if a convergent is <span 
+class="cmmi-10">A</span><sub><span 
+class="cmmi-7">n</span></sub> = <img 
+src="cumc2020_code19x.png" alt="pq"  class="frac" align="middle">, the next two convergents are
+<span 
+class="cmmi-10">A</span><sub><span 
+class="cmmi-7">n</span><span 
+class="cmr-7">+1</span></sub> = <img 
+src="cumc2020_code20x.png" alt="p+q
+ p"  class="frac" align="middle"> and <span 
+class="cmmi-10">A</span><sub><span 
+class="cmmi-7">n</span><span 
+class="cmr-7">+2</span></sub> = <img 
+src="cumc2020_code21x.png" alt="2p+q-
+p+q"  class="frac" align="middle">. We make 2 important observations,
+<!--l. 131--><p class="indent" >
+         <dl class="enumerate"><dt class="enumerate">
+   (1) </dt><dd 
+class="enumerate">The denominator of <span 
+class="cmmi-10">A</span><sub><span 
+class="cmmi-7">n</span><span 
+class="cmr-7">+2</span></sub> is the sum of the previous 2 denominators
+         </dd><dt class="enumerate">
+   (2) </dt><dd 
+class="enumerate">The numerator of <span 
+class="cmmi-10">A</span><sub><span 
+class="cmmi-7">n</span><span 
+class="cmr-7">+2</span></sub> is the sum of the previous 2 numerators</dd></dl>
+<!--l. 134--><p class="noindent" >Is there a sequence that follows this pattern? Yes, the Fibonacci numbers! As a
+matter of fact, the nth convergent is the ratio between 2 consecutive Fibonacci
+numbers. Since we evaluated A to be the Golden ratio, what we just shown is that
+the ratio between consecutive Fibonacci numbers tends to the Golden ratio.
+Symbolically,
+  <div class="math-display" >
+<img 
+src="cumc2020_code22x.png" alt="    fib         1 + &#x221A;5
+lim  ---n+1 = &#x03D5; =------
+n&#x2192;&#x221E;  fibn          2
+" class="math-display" ></div>
+<!--l. 136--><p class="indent" >  We see how just by studying the &#8221;Simplest&#8221; continued fractions we were able to
+discover a lot of mathematics. Clearly there is something interesting going on with
+continued fractions.
+  <h3 class="sectionHead"><span class="titlemark">3. </span> <a 
+ id="x1-40003"></a>When Infinity Becomes Tricky</h3>
+<!--l. 140--><p class="noindent" >There is an issue with the trick introduced in the last section. Although it is elegant, it
+makes the assumption that the expression converges. If the expression does not
+converge, the value of A is useless. Here is a classic example of when this trick
+fails.
+  <div class="newtheorem">
+<!--l. 142--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4001r1"></a>
+<span 
+class="cmbx-10">Example 3.1.</span>  </span>Sum of a Geometric Series
+<!--l. 144--><p class="indent" >  Let <span 
+class="cmmi-10">A </span>= (1 + 2 + 4 + 8 + <span 
+class="cmmi-10">...</span>) <br 
+class="newline" />
+                                                                     
+
+                                                                     
+  <div class="math-display" >
+<img 
+src="cumc2020_code23x.png" alt="A = 1 + 2(1 + 2+ 4+ 8 + ...) =&#x21D2;  A = 1+ 2A  =&#x21D2;  A = - 1
+                                                   2
+" class="math-display" ></div>
+  </div>
+<!--l. 147--><p class="indent" >
+<!--l. 149--><p class="indent" >  The good thing is the trick works if the object we are studying converges. So if we
+show the Continued Fraction converges, we can use the trick, right? Well, we have one
+more complication that is specific to Continued Fractions.
+  <div class="newtheorem">
+<!--l. 151--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4002r2"></a>
+<span 
+class="cmbx-10">Example 3.2.</span>  </span>Converges to different values<br 
+class="newline" />Recall that we are working with Simple Continued Fractions. For this example, we
+broaden our definition of Continued Fractions. Consider the following equalities.<br 
+class="newline" />
+  <div class="math-display" >
+<img 
+src="cumc2020_code24x.png" alt="1 = --2---= ----22-- = ----2-2---
+    3- (1)  3 - 3-(1)   3- 3--3-2...
+" class="math-display" ></div>
+<!--l. 154--><p class="indent" >
+  <div class="math-display" >
+<img 
+src="cumc2020_code25x.png" alt="2 = --2---= ----2--- = ----2-----
+    3- (2)  3 - 32-(2)   3- 3--22-
+                             3-...
+" class="math-display" ></div>
+  </div>
+<!--l. 155--><p class="indent" >
+It is true that at every finite step in the equalities hold. For this reason, it seems as if the
+same Continued Fraction converges to 2 values, meaning that 1=2. This cannot be true.
+How can we resolve this issue? We need to first pinpoint where the issues are arising
+from.
+  <h3 class="sectionHead"><span class="titlemark">4. </span> <a 
+ id="x1-50004"></a>Fixing the Infinity Problem</h3>
+<!--l. 160--><p class="noindent" >The previous section highlighted examples that exposed gaps in our understanding of
+the Continued Fractions. We will try to fill in the gaps by trying to make our
+treatment of Continued Fractions more rigorous. Here are some points to keep in
+mind.
+<!--l. 163--><p class="indent" >
+         <dl class="enumerate"><dt class="enumerate">
+   (1) </dt><dd 
+class="enumerate"><span 
+class="cmbx-10">Significance of the &#8221;seed value&#8221;</span><br 
+class="newline" />Intuition first suggests that the fractions may not be equal because of the
+       different &#8221;seed&#8221;. The first expression is seeded by 1 while the second is
+       seeded by 2. We can come to expect different behaviours for this same
+       Continued Fraction with different seed values.
+         </dd><dt class="enumerate">
+   <span 
+class="cmbx-10">(2)</span> </dt><dd 
+class="enumerate"><span 
+class="cmbx-10">Defining a Limiting Process</span><br 
+class="newline" />Let us try using the trick here despite not having proven convergence:<br 
+class="newline" />
+  <div class="math-display" >
+<img 
+src="cumc2020_code26x.png" alt="A = --2-- =&#x21D2;  A2 - 3A + 2 = 0 =&#x21D2; A = 1,A = 2
+    3 - A
+" class="math-display" ></div>
+       <!--l. 168--><p class="indent" >    This does not help us much since both roots are viable solutions. We
+       turn to our second approach, the limit of nth convergents. We say that the
+       limit of the nth convergent is equal to the continued expression. The point
+       is that we associate an exact definition with our infinite process. Similar to
+       &#8221;seed values&#8221;, we can expect different behaviours for the same Continued
+       Fraction with different definitions.
+                                                                     
+
+                                                                     
+         </dd><dt class="enumerate">
+   <span 
+class="cmbx-10">(3)</span> </dt><dd 
+class="enumerate"><span 
+class="cmbx-10">Exact definition of Convergence</span><br 
+class="newline" />The final piece of the puzzle is to define when the limiting process converges.
+       Even though we have a process to express the continued fraction, we have
+       not defined when we are allowed to say that it converges to a real value. We
+       will rely on the usual Epsilon-Delta definition of convergence. As with the
+       previous 2 point, we can expect different behaviours for the same Continued
+       Fraction with different definitions of convergence.</dd></dl>
+<!--l. 174--><p class="indent" >  If we take the points made above as a checklist, by making sure we define a seed,
+limiting process, and definition of Convergence, we can be confident that we will not run
+into the issues of the last section. The discussion made in (2) and (3) are important and
+come up in mathematics whenever infinity enters the picture. They can also
+be the source of non-intuitive results that mathematicians seem to accept as
+true. Try to think of some instances where you&#8217;ve come across something like
+this.<br 
+class="newline" />
+<!--l. 176--><p class="indent" >  The point made in (1) is more specific to the rest of this paper, I need it so we can
+define our own accept limiting process for Continued Fraction. The accepted
+limiting process for CFs is the nth convergent, and it can be seen as a top-down
+definition of the CF. We will construct a bottom-up approach to define CF.
+This is to avoid unnecessary notation. Luckly, in the example below, they will
+both be equivalent. We are now ready to formally prove the convergence of
+1 + <img 
+src="cumc2020_code27x.png" alt="11+..."  class="frac" align="middle">
+  <div class="newtheorem">
+<!--l. 178--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5004r1"></a>
+<span 
+class="cmbx-10">Definition 4.1.</span>  </span>.<br 
+class="newline" />The Continued Fraction of 1 + <img 
+src="cumc2020_code28x.png" alt="   1
+-----1---
+1+ 1+-..." > is defined as: <br 
+class="newline" />
+         <dl class="enumerate"><dt class="enumerate">
+   (1) </dt><dd 
+class="enumerate"><span 
+class="cmmi-10">a</span><sub><span 
+class="cmr-7">1</span></sub> = 1 (seed value)
+         </dd><dt class="enumerate">
+   (2) </dt><dd 
+class="enumerate"><span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">n</span></sub> = 1 + <img 
+src="cumc2020_code29x.png" alt="-1--
+an-1"  class="frac" align="middle"> for <span 
+class="cmmi-10">n &#x003E; </span>1 (limiting process)</dd></dl>
+<!--l. 184--><p class="noindent" >This definition is hardly generalizable to all CFs<span class="footnote-mark"><a 
+href="cumc2020_code2.html#fn1x0">1</a></span>but as long as we can accept it, that will
+make it sufficient for this discussion.
+  </div>
+<!--l. 186--><p class="indent" >
+                                                                     
+
+                                                                     
+<!--l. 193--><p class="indent" >  <a 
+ id="x1-5007f1"></a>
+  <div class="newtheorem">
+<!--l. 195--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5008r2"></a>
+<span 
+class="cmbx-10">Example 4.2.</span>  </span>Prove convergence of 1 + <img 
+src="cumc2020_code31x.png" alt="1+1..."  class="frac" align="middle"> is Golden ratio<br 
+class="newline" />
+  <div class="proof">
+<!--l. 196--><p class="indent" >  <span class="head">
+<span 
+class="cmti-10">Proof.</span> </span>.<br 
+class="newline" />
+<!--l. 198--><p class="indent" >  Let <span 
+class="cmmi-10">&#x03F5; &#x003E; </span>0. Choose <span 
+class="cmmi-10">N </span>= <span 
+class="cmsy-10">-</span>log <sub><span 
+class="cmmi-7">&#x03D5;</span></sub><span 
+class="cmmi-10">&#x03F5; &#x003E; </span>0 (whenever <span 
+class="cmmi-10">&#x03F5; &#x003C; </span>1 ). Let <span 
+class="cmmi-10">n &#x003E; N</span>,<br 
+class="newline" />w.t.s: <span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">n</span></sub> <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03D5;</span><span 
+class="cmsy-10">| </span><span 
+class="cmmi-10">&#x003C; &#x03F5;</span><br 
+class="newline" />
+<!--l. 202--><p class="indent" >  Consider,<br 
+class="newline" />
+<table 
+class="align-star">
+    <tr><td 
+class="align-odd"><span 
+class="cmsy-10">|</span><img 
+src="cumc2020_code32x.png" alt=" a  - &#x03D5;
+--n-----
+an- 1 - &#x03D5;" ><span 
+class="cmsy-10">|</span></td>    <td 
+class="align-even"> = <span 
+class="cmsy-10">|</span><img 
+src="cumc2020_code33x.png" alt="      1         1
+(1+  ----)- (1+ --)
+-----an-1-------&#x03D5;-
+      an-1 - &#x03D5;" ><span 
+class="cmsy-10">|</span> ; using def of <span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">n</span></sub> and identity of <span 
+class="cmmi-10">&#x03D5;</span></td>    <td 
+class="align-label"></td>    <td 
+class="align-label">
+    </td></tr><tr><td 
+class="align-odd"></td>             <td 
+class="align-even"> = <span 
+class="cmsy-10">|</span><img 
+src="cumc2020_code34x.png" alt="--1---
+&#x03D5;an- 1" ><span 
+class="cmsy-10">|</span> ; simplified expression</td>                           <td 
+class="align-label"></td>    <td 
+class="align-label">
+    </td></tr><tr><td 
+class="align-odd"></td>             <td 
+class="align-even"> <span 
+class="cmsy-10">&#x2264;</span><img 
+src="cumc2020_code35x.png" alt="1-
+&#x03D5;" > ; since for all k, <span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">k</span></sub> <span 
+class="cmsy-10">&#x2265; </span>1</td>                               <td 
+class="align-label"></td>    <td 
+class="align-label"></td></tr></table>
+                                                                     
+
+                                                                     
+<!--l. 211--><p class="indent" >  So,
+<table 
+class="align-star">
+                     <tr><td 
+class="align-odd"><span 
+class="cmsy-10">|</span><img 
+src="cumc2020_code36x.png" alt="-an --&#x03D5;-
+an-1 - &#x03D5;" ><span 
+class="cmsy-10">|</span></td>                       <td 
+class="align-even"><span 
+class="cmsy-10">&#x2264;</span><img 
+src="cumc2020_code37x.png" alt="1-
+&#x03D5;" ></td>                                <td 
+class="align-label"></td>                     <td 
+class="align-label">
+                     </td></tr><tr><td 
+class="align-odd"> <img 
+src="cumc2020_code38x.png" alt="=&#x21D2;"  class="Longrightarrow" ><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">n</span></sub> <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03D5;</span><span 
+class="cmsy-10">|</span></td>                     <td 
+class="align-even"><span 
+class="cmsy-10">&#x2264;</span><img 
+src="cumc2020_code39x.png" alt="1-
+&#x03D5;" ><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">n</span><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03D5;</span><span 
+class="cmsy-10">|</span></td>                        <td 
+class="align-label"></td>                     <td 
+class="align-label">
+                     </td></tr><tr><td 
+class="align-odd"><img 
+src="cumc2020_code40x.png" alt="=&#x21D2;"  class="Longrightarrow" ><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">n</span></sub> <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03D5;</span><span 
+class="cmsy-10">|</span></td>                     <td 
+class="align-even"><span 
+class="cmsy-10">&#x2264;</span><img 
+src="cumc2020_code41x.png" alt="--1--
+&#x03D5;n-1" ><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">a</span><sub><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03D5;</span><span 
+class="cmsy-10">|</span></td>                       <td 
+class="align-label"></td>                     <td 
+class="align-label">
+                     </td></tr><tr><td 
+class="align-odd"></td>                                <td 
+class="align-even"> = <img 
+src="cumc2020_code42x.png" alt="--1--
+&#x03D5;n-1" ><span 
+class="cmsy-10">|</span>1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03D5;</span><span 
+class="cmsy-10">|</span></td>                        <td 
+class="align-label"></td>                     <td 
+class="align-label">
+                     </td></tr><tr><td 
+class="align-odd"></td>                                <td 
+class="align-even"> = <span 
+class="cmmi-10">&#x03D5;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmmi-7">n</span></sup> <span 
+class="cmmi-10">&#x003C; &#x03D5;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmmi-7">N</span></sup> = <span 
+class="cmmi-10">&#x03F5;</span></td>                     <td 
+class="align-label"></td>                     <td 
+class="align-label">
+                     </td></tr><tr><td 
+class="align-odd"></td>                                <td 
+class="align-even"></td>                                    <td 
+class="align-label">                     </td></tr></table>
+  <span class="qed"><span 
+class="msam-10">&#x25A1;</span></span>
+  </div>
+  </div>
+<!--l. 222--><p class="indent" >
+<!--l. 225--><p class="indent" >  In the last part of the proof, qualitatively, we bound expression in <span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">n</span></sub> with an
+expression in <span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">n</span><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sub> and a factor of 1<span 
+class="cmmi-10">&#x2215;&#x03D5;</span>. We can further bound all <span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">k</span></sub>&#8217;s by reducing the
+index of <span 
+class="cmmi-10">a</span><sub><span 
+class="cmmi-7">k</span></sub> and multiplying a factor of 1<span 
+class="cmmi-10">&#x2215;&#x03D5;</span>. In the 2nd last line, I use the identity
+<span 
+class="cmmi-10">&#x03D5; </span>= 1 + 1<span 
+class="cmmi-10">&#x2215;&#x03D5;</span>.
+                                                                     
+
+                                                                     
+  <h3 class="sectionHead"><span class="titlemark">5. </span> <a 
+ id="x1-60005"></a>Summary</h3>
+<!--l. 229--><p class="noindent" >It is hard to wrap your head around infinite processes. When trying to ask questions
+about the evaluation of an infinite process or the equality between 2 infinite processes,
+following seemingly valid operations can lead to contradictions. Our unconscious
+assumptions try to fill in the gaps in our understanding of infinity. Continued fractions
+are used as an analogy to demonstrate what it takes to fill in these gaps using
+mathematical rigour. We should approach all mathematical ideas involving
+infinity with this new mindset and think critically about the assumptions we
+make.
+  <h3 class="sectionHead"><a 
+ id="x1-70005"></a>References</h3>
+<!--l. 231--><p class="noindent" >
+   <div class="thebibliography">
+   <p class="bibitem" ><span class="biblabel">
+<span 
+class="cmr-8">[1]</span> <span class="bibsp"><span 
+class="cmr-8">&#x00A0;</span><span 
+class="cmr-8">&#x00A0;</span><span 
+class="cmr-8">&#x00A0;</span></span></span><a 
+ id="XITN"></a><span 
+class="cmr-8">Niven, I., Zuckerman, H. S., Montgomery, H. L. (1991). An introduction to the theory of</span>
+   <span 
+class="cmr-8">numbers Ch-7. New York: Wiley.</span>
+   </p>
+   <p class="bibitem" ><span class="biblabel">
+<span 
+class="cmr-8">[2]</span> <span class="bibsp"><span 
+class="cmr-8">&#x00A0;</span><span 
+class="cmr-8">&#x00A0;</span><span 
+class="cmr-8">&#x00A0;</span></span></span><a 
+ id="Xmathologer_video"></a><a 
+href="https://www.youtube.com/watch?v=CaasbfdJdJg&t=80s&ab_channel=Mathologer" ><span 
+class="cmr-8">Mathologer Youtube Video, Infinite fractions and the most irrational number</span></a>
+</p>
+   </div>
+   
+</body></html> 
+
+                                                                     
+
+
