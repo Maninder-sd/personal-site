@@ -108,7 +108,16 @@ body {
         // width: 60em;
       }
       .video{
+        // display: none;
           padding: 1em;
+          width:56vw;
+          height:31vw;
+          max-width: 40em;
+          max-height: 22em;
+      }
+      .alt-video img{
+        display: none;
+        padding: 1em;
           width:56vw;
           height:31vw;
           max-width: 40em;
@@ -183,6 +192,23 @@ body {
   }
   
 
+  .intro{
+    iframe{
+      display: none;
+    }
+  }
+  .intro .alt-video img{
+    display:unset;
+
+      padding: 1em;
+    width:56vw;
+    height:31vw;
+
+    
+    
+  }
+
+
 }
 
 @media only screen and (max-width: 560px){
@@ -201,5 +227,6 @@ body {
     .intro h2{
       display: none;
     }
+
   
   }

@@ -116,6 +116,15 @@ body {
   max-height: 22em;
 }
 
+.intro .alt-video img {
+  display: none;
+  padding: 1em;
+  width: 56vw;
+  height: 31vw;
+  max-width: 40em;
+  max-height: 22em;
+}
+
 .intro .pdf-button {
   background-color: grey;
   padding: 0.5em;
@@ -192,6 +201,15 @@ body {
   }
   .paper .container {
     padding: 0;
+  }
+  .intro iframe {
+    display: none;
+  }
+  .intro .alt-video img {
+    display: unset;
+    padding: 1em;
+    width: 56vw;
+    height: 31vw;
   }
 }
 
