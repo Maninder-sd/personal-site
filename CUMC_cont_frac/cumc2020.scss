@@ -7,8 +7,8 @@
   --background-color: #F2F2F2;
 
   --paper-color: whitesmoke;
-  --intro-color:white;
-  --title-color: white;
+  --intro-color:#096486;
+  --title-color: var(--primary-blue);
   --bar-color: var(--dark-blue)
 }
 
@@ -68,12 +68,13 @@ body {
   }
 
   .intro{
-      // background-color: orange;
+      background-color: #096486;
     display: flex;
     flex-direction: column;
     align-items: center;
       .container{
           // width: 80em;
+          color: white;
           background-color: var(--intro-color);
           // background-color: orchid;
           display: flex;
@@ -81,11 +82,15 @@ body {
           align-items: center;
       }
       h1{
-        background-color: var(--title-color);
-          font-weight:normal;
+        color: white;
+
+        // background-color: var(--title-color);
+          font-weight:bold;
           text-align: center;
           font-size: 2em;
           padding: 0.5em;
+          max-width: 30em;
+          
         //   text-decoration: underline;
           // width: 30em;
       }
@@ -94,7 +99,10 @@ body {
         font-size: 1em;
         margin-right: 10%;
         margin-left: 10%;
-        
+        a{
+          color: white;
+          font-weight: bold;
+        }
         // text-indent: 2.5em;
         // text-align: center;
         // width: 60em;
@@ -127,6 +135,7 @@ body {
         width:50em;
         padding-left: 10%;
         padding-right: 10%;
+        padding-top: 5em;
         height: 100%;
         display: flex;
         justify-content: center;
