@@ -115,7 +115,7 @@ body {
           max-width: 40em;
           max-height: 22em;
       }
-      .alt-video img{
+      .alt-video{
         display: none;
         padding: 1em;
           width:56vw;
@@ -197,12 +197,14 @@ body {
       display: none;
     }
   }
-  .intro .alt-video img{
+  .intro .alt-video {
     display:unset;
-
+    img{
       padding: 1em;
-    width:56vw;
-    height:31vw;
+     width:56vw;
+     height:31vw;
+    }
+
 
     
     

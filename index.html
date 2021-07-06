@@ -35,10 +35,9 @@
             <img src="./assets/profile-image.jpg" alt="Picture of me" class="main-img">
         </div>
         <div class="right-col">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum vehicula enim tempor semper. Proin molestie, neque et dignissim condimentum, 
-                lectus lorem aliquam mi, ac pharetra mi tortor nec tortor. Fusce faucibus turpis vel nunc porta, at imperdiet velit mollis. Aliquam placerat ligula velit, 
-                vel faucibus ipsum rhoncus semper. Suspendisse vehicula, nunc at pulvinar maximus, felis ante gravida metus, id feugiat ex tortor ac velit. Suspendisse
-                 vestibulum rhoncus mauris, ut mollis libero blandit seds
+            <h1>
+                My name is Maninder and I have a strong interests in Data Science and Web Development technologies. Having worked to verify the effectiveness of ML tools as a Research Assistant, and with Fullstack experience on collaborative web development projects, I aspire to combine my interests and create Data Analytics tools that empower people to understand the world better.
+
             </h1>
         </div>
     </div>
@@ -50,7 +49,10 @@
         <ul>
             <li class="web-skill">
                 <div class="skill-card">
-                    <div class="img-cont">
+                    <div class="img-cont" 
+                    onclick="openModal('web-dev-modal')"
+                    
+                    >
                         <img src="./assets/sportCred.png" alt="SportCred Webapp Project">
                         <!-- <div class="indicate"> </div> -->
                         <div class="img-overlay"> 
@@ -64,10 +66,8 @@
                     <div class="text">
 
                             <h1>Web Development</h1>
-                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Nullam condimentum vehicula enim tempor semper. Proin 
-                                molestie, neque et dignissim condimentum, lectus lorem 
-                                aliquam mi, ac pharetra mi tortor nec tortor. 
+                            <h2>
+                                I have worked as a fullstack developer on an Agile team of 7 to create a social media React application. I was responsible for developing authentication APIs used during login and design and implement interfaces for Dabates and Trivia game pages.  
                             </h2>
                             <div class="learn-more">
                                 <a href="#">Learn more</a>
@@ -82,20 +82,18 @@
                 <div class="skill-card">
                     <div class="text">
                         <h1>Research</h1>
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                            Nullam condimentum vehicula enim tempor semper. Proin 
-                            molestie, neque et dignissim condimentum, lectus lorem 
-                            aliquam mi, ac pharetra mi tortor nec tortor. 
+                        <h2>
+                            I strive to apply my programming skills in a variety of different settings. Research positions allow me to understand how I can connect my skills to different disciplines that I have otherwise never studied before. Hence, I have held 3 unique research positions in theoretical Astrophysics, Human-Computer Interaction and Insect Physiology. 
                         </h2>
                         <div class="learn-more">
                             <a href="#">Learn more</a>
                         </div>
                     </div>
 
-                    <div class="img-cont">
-                        <img src="./assets/research.jpg" alt="SportCred Webapp Project">
+                    <div class="img-cont" onclick="openModal('research-modal')">
+                        <img src="./assets/research.jpg" alt="Image of a paper I worked with">
                         <div class="img-overlay">
-                            <div class="text">SportCred: A SportsFan's Social Media</div>   
+                            <div class="text">Comparing Cluster Validity Matrics to Human Judgement of Cluster Quality</div>   
                          </div>
                     </div>
 
@@ -107,10 +105,10 @@
                 <div class="skill-card">
                     
 
-                    <div class="img-cont">
+                    <div class="img-cont" onclick="openModal('web-dev-modal')">
                         <img src="./assets/data.png" alt="SportCred Webapp Project">
                         <div class="img-overlay"> 
-                            <div class="text">SportCred: A SportsFan's Social Media</div>   
+                            <div class="text">Comparing Cluster Validity Matrics to Human Judgement of Cluster Quality;</div>   
                         </div>
                     </div>
 
@@ -130,6 +128,45 @@
         </ul>
     </div>
 </section>
+
+
+<!-- modals -->
+
+<div id="web-dev-modal" class="web-dev-modal">
+    <div class="contents">
+        <button class="exit" onclick="closeModal('web-dev-modal')"> × </button>
+        <div class="images">
+            <img src="./assets/sports-modal1.png" alt="SportCred Webapp Project">
+            <img src="./assets/sports-modal2.png" alt="SportCred Webapp Project">
+            <!-- <img src="./assets/sportCred.png" alt="SportCred Webapp Project"> -->
+        </div>
+        <div class="text">
+            web-dev-modal sLorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nullam condimentum vehicula enim tempor semper. Proin 
+                            molestie, neque et dignissim condimentum, lectus lorem 
+                            aliquam mi, ac pharetra mi tortor nec tortor
+        </div>
+    </div>
+</div>
+
+<div id="research-modal" class="research-modal">
+    <div class="contents">
+        <button class="exit" onclick="closeModal('research-modal')"> × </button>
+        <div class="images">
+            <img src="./assets/research-modal.png" alt="SportCred Webapp Project">
+            <!-- <img src="./assets/sportCred.png" alt="SportCred Webapp Project"> -->
+            <!-- <img src="./assets/sportCred.png" alt="SportCred Webapp Project"> -->
+        </div>
+        <div class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Nullam condimentum vehicula enim tempor semper. Proin 
+                            molestie, neque et dignissim condimentum, lectus lorem 
+                            aliquam mi, ac pharetra mi tortor nec tortor
+        </div>
+    </div>
+</div>
+
+
 
 
 <section class="contacts">
@@ -173,5 +210,21 @@
 </section>
 
 </body>
+
+<script>
+function closeModal(modalId){
+    console.log("hello")
+    console.log(modalId)
+    document.getElementById(modalId).style.display='none';
+}
+function openModal(modalId){
+    console.log("hello")
+    console.log(modalId)
+    document.getElementById(modalId).style.display='flex';
+
+}
+
+
+</script>
 
 </html>
