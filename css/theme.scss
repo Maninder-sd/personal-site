@@ -7,9 +7,21 @@
     --text-primary: #2B1700;
     --text-secondary: #5F3709;
     --btn-dark: #8A510F;
+    --btn-light: #FFE1A4;
 }
 
 body{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    // width: 50em;
+    // background-color: aquamarine;
+    background-image: url(/assets/Linen_background.png);
+    // background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hero-page{
     font-family: 'Montserrat';
     margin: 0;
     margin-left: 6em;
@@ -107,10 +119,102 @@ body{
     }
 }
 
+.recent-project-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 7em;
+    background-color: #DFCA9F;
+    padding: 1.5em;
+    margin-top: 5em;
+    border-radius: 0.5em;
+    box-shadow: 20px 15px 1px rgba(10,10,10,0.4);
+}
+
+.recent-project-card .project-img{
+    height: 100%;
+    img{
+        height:100%;
+    }
+}
+
+.btn{
+    background-color: var(--btn-dark);
+    color: white;
+    height: 2.2em;
+    padding: 0 1em 0 1em;
+    
+    margin-right: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:hover{
+        // font-weight: bold;
+        background-color: var(--btn-light);
+        color: var(--text-primary);
+
+        // font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.recent-project-card .project-body{
+    height: 100%;
+    .recent-project-txt{
+        font-size: larger;
+        margin:0;
+    }
+    margin-left: 1em;
+    // background-color: aquamarine;
+    .project-btns{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        // background-color: #f5d189;
+        padding: 0;
+        margin: 0;
+        
+    }
+}
+
+
+.main-body{
+    margin-top: 8em;
+    padding-top: 3em;
+    background-color: white;
+}
+
 .body-text{
+
+
+    margin: 0;
+    margin-left: 6em;
+    margin-top: 2em;
+    width: 50em;
+
     p{
         color: var(--text-secondary);
-        // font-weight: 700;
+        font-weight: 700;
         font-size:larger;
+    }
+    .contact-info{
+        font-weight:500;
+        font-size:medium;
+        margin: 0;
+    }
+}
+
+.footer{
+    height: 2em;
+    background-color: #122830;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        // font-family: 'times new roman';
+        text-align: center;
+        font-weight: normal;
+        color: white;
+        font-size: 0.7em;
     }
 }
