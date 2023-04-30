@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+:root {
+  --text-primary: #2B1700;
+  --text-secondary: #5F3709;
+  --btn-dark: #8A510F;
+}
+
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+  margin-left: 6em;
+  margin-top: 2em;
+  width: 50em;
+  background-image: url(/assets/Linen_background.png);
+  background-attachment: fixed;
+}
+
+.navbar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 10em;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 2.1em;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.navbar .logo .lastName {
+  position: relative;
+  left: 1.6em;
+}
+
+.navbar .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+  margin-top: 1em;
+  list-style-type: none;
+  background-color: #f5d189;
+  width: 50em;
+  height: 2.5em;
+  border-radius: 0.4em;
+}
+
+.navbar .nav-list .nav-li {
+  padding: 0 1.5em 0 1.5em;
+  height: 90%;
+  border-radius: 0.4em;
+  margin-left: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar .nav-list .nav-li .nav-txt {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: larger;
+}
+
+.navbar .nav-list .nav-li .nav-txt:hover {
+  color: #8A510F;
+  font-weight: 600;
+}
+
+.navbar .nav-list .nav-li .nav-txt .nav-tracker {
+  visibility: hidden;
+  height: 0.1em;
+  background-color: var(--text-primary);
+  position: relative;
+  top: 0.2em;
+}
+
+.navbar .nav-list .nav-li.current-selection {
+  background-color: #FFE1A4;
+}
+
+.navbar .nav-list .nav-li.current-selection .nav-txt {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.navbar .nav-list .nav-li.current-selection .nav-txt .nav-tracker {
+  visibility: visible;
+}
+
+.intro .greeting {
+  margin: 3em 0 2em 0;
+}
+
+.intro p {
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: larger;
+}
+
+.body-text p {
+  color: var(--text-secondary);
+  font-size: larger;
+}
+/*# sourceMappingURL=theme.css.map */
