@@ -1,3 +1,4 @@
 *.map
 *.scss
 untracked_folder/*
+*.log
