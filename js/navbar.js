@@ -11,8 +11,8 @@
 //   });
 console.log("hello world");
 // This loads the content for each page
-$.get("/html/landing.html", function (data) {
-    $("#page-content-placeholder").replaceWith(data);
+$.get("/html/about.html", function (data) {
+    $("#page-content-placeholder").append(data);
 });
 
 function navItemOnClick(element, itemName) {
@@ -23,6 +23,10 @@ function navItemOnClick(element, itemName) {
         document.getElementById('work-li').classList.remove("current-selection");
         document.getElementById('projects-li').classList.remove("current-selection");
         element.classList.add("current-selection");
+        $("#page-content-placeholder").empty();
+        $.get("/html/"+itemName+".html", function (data) {
+            $("#page-content-placeholder").append(data);
+        });
     }
 
 

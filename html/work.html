@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/work.css">
+    <title>Maninder Dhanauta</title>
+</head>
+
+<body class="work-experience-body">
+
+    My Work Experience
+    <div id="work-list"></div>
+    <div class="add-job" onclick="openAddJobOverlay()">
+        <img src="/assets/add.png" title="Add work experience">
+    </div>
+    <div id="add-job-overlay" class="add-job-overlay">
+        <img class="close-work-overlay" src="/assets/exit.png" onclick="closeAddJobOverlay()">
+        <p>Fill in the following info</p>
+        <form id="work-form">
+            <div class="text">
+                <label for="JobTitle">Job Title:</label><br>
+                <input type="text" id="JobTitle" name="JobTitle">
+            </div>
+            <div class="text">
+                <label for="Company">Company:</label><br>
+                <input type="text" id="Company" name="Company" value=""><br>
+            </div>
+            <div class="text">
+                <label for="Duration">Duration:</label><br>
+                <input type="text" id="Duration" name="Duration" value=""><br>
+            </div>
+            <div class="text">
+                <label for="Summary">Summary:</label><br>
+                <input type="text" id="Summary" name="Summary" value=""><br>
+            </div>
+            <div class="text">
+
+                <label for="Image">Image:</label><br>
+                <input type="text" id="Image" name="Image" value=""><br>
+            </div>
+
+
+
+
+
+            <br>
+            <label>Select Skills:</label>
+            <div class="skill-list">
+                <input type="checkbox" id="SQL" name="SQL">
+                <label for="SQL">SQL</label>
+                <input type="checkbox" id="HTML" name="HTML">
+                <label for="HTML">HTML</label>
+                <input type="checkbox" id="React" name="React">
+                <label for="React"> React JS</label>
+                <input type="checkbox" id="Linux" name="Linux">
+                <label for="Linux">Linux</label><br>
+
+                <input type="checkbox" id="Terminal" name="Terminal">
+                <label for="Terminal">Teminal</label>
+                <input type="checkbox" id="SSMS" name="SSMS">
+                <label for="SSMS">SSMS</label>
+                <input type="checkbox" id="SSMS" name="SSMS">
+                <label for="SSMS">SSMS</label>
+                <input type="checkbox" id="SSMS" name="SSMS">
+                <label for="SSMS">SSMS</label><br>
+
+                <input type="checkbox" id="SSMS" name="SSMS">
+                <label for="SSMS">SSMS</label>
+                <input type="checkbox" id="SSMS" name="SSMS">
+                <label for="SSMS">SSMS</label><br>
+            </div>
+            <div class="text">
+                <!-- <label for="Skills">Skills:</label><br> -->
+                <input type="text" id="Skills" name="Skills">
+            </div>
+
+            <br>
+        </form>
+        <div id="json-display" class="json-display">
+            <p id="json-display-text" class="json-display-text">  
+                Click Generate JSON 
+            </p>
+        </div>
+        <div class="json-btns">
+            <div class="generate-json btn" onclick="generateJSON()">
+                <p>Generate JSON</p>
+            </div>
+            <div class="download-json btn" onclick="downloadEntireJSON()">
+                <p>Download Entire JSON</p>
+            </div>
+        </div>
+        <p>Now copy paste this into the txt file, commit to github, and wait. The struggles with static webpages:( </p>
+    </div>
+
+</body>
+
+<script src="/js/generate_work.js"></script>
+
+</html>
