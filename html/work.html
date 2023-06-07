@@ -9,13 +9,38 @@
     <title>Maninder Dhanauta</title>
 </head>
 
-<body class="work-experience-body">
+<div class="work-experience-body">
 
-    My Work Experience
-    <div id="work-list"></div>
+    <h2>Here are my Work Experiences: </h2> 
+
+
+    <div id="work-list">
+        <!-- JS will place the cards here, see generate_work.js generateWorkCards() -->
+        <!-- <div class="work-card">
+            <img class="work-img" src="/assets/ssnclogo.png" alt="" />
+            <div class="work-content">
+                <p class="work-title">Full Stack Developer Co-op </p>
+                <p class="work-location">SS&C Technologies (May 2022 - Dec 2022)</p>
+                <p class="work-summary">
+                    Created and optimized SSIS packages in the company Data Warehouse for extraction, loading, and
+                    transformation (ETL) of SQL data, ultimately reduced package run time on servers by factor of 3
+                </p>
+                <div class="work-card-skills">
+                    <div class="work-card-skill-item"> SQL</div>
+                    <div class="work-card-skill-item"> HTML</div>
+                    <div class="work-card-skill-item"> SSIS</div>
+                    <div class="work-card-skill-item"> ReactJS</div>
+                </div>
+
+            </div>
+        </div> -->
+    </div>
+
+
     <div class="add-job" onclick="openAddJobOverlay()">
         <img src="/assets/add.png" title="Add work experience">
     </div>
+
     <div id="add-job-overlay" class="add-job-overlay">
         <img class="close-work-overlay" src="/assets/exit.png" onclick="closeAddJobOverlay()">
         <p>Fill in the following info</p>
@@ -49,7 +74,15 @@
             <br>
             <label>Select Skills:</label>
             <div class="skill-list">
-                <input type="checkbox" id="SQL" name="SQL">
+                <div class="skill-item SQL" onclick="appendToSkills('SQL')">SQL</div>
+                <div class="skill-item HTML" onclick="appendToSkills('HTML')">HTML</div>
+                <div class="skill-item ReactJS" onclick="appendToSkills('ReactJS')">ReactJS</div>
+                <div class="skill-item Linux" onclick="appendToSkills('Linux')">Linux</div>
+                <div class="skill-item SSMS" onclick="appendToSkills('SSMS')">SSMS</div>
+                <div class="skill-item SSIS" onclick="appendToSkills('SSIS')">SSIS</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('SSRS')">SSRS</div>
+
+                <!-- <input type="checkbox" id="SQL" name="SQL">
                 <label for="SQL">SQL</label>
                 <input type="checkbox" id="HTML" name="HTML">
                 <label for="HTML">HTML</label>
@@ -70,18 +103,23 @@
                 <input type="checkbox" id="SSMS" name="SSMS">
                 <label for="SSMS">SSMS</label>
                 <input type="checkbox" id="SSMS" name="SSMS">
-                <label for="SSMS">SSMS</label><br>
+                <label for="SSMS">SSMS</label><br> -->
             </div>
             <div class="text">
-                <!-- <label for="Skills">Skills:</label><br> -->
-                <input type="text" id="Skills" name="Skills">
+                <!-- <label for="Skills">Skills:</label><br>
+                <input type="textarea" id="Skills" name="Skills"> -->
+
+                <p> <textarea class="textarea" id="Skills" name="Skills"></textarea></p>
+
+
+                <!-- <p><strong>Solution with span:</strong> <span class="textarea" role="textbox" contenteditable></span></p> -->
             </div>
 
             <br>
         </form>
         <div id="json-display" class="json-display">
-            <p id="json-display-text" class="json-display-text">  
-                Click Generate JSON 
+            <p id="json-display-text" class="json-display-text">
+                Click Generate JSON
             </p>
         </div>
         <div class="json-btns">
@@ -95,8 +133,8 @@
         <p>Now copy paste this into the txt file, commit to github, and wait. The struggles with static webpages:( </p>
     </div>
 
-</body>
+</div>
 
-<script src="/js/generate_work.js"></script>
+<script  src="/js/generate_work.js"></script>
 
 </html>

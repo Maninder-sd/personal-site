@@ -1,29 +1,5 @@
-{
-	[
-		JobTitle: "Full Stack Developer Co-op",
-		Company: "SS&C Technologies",
-		StartDate: "05/2022",
-		EndDate: "12/2022"
-		Summary: "•	Created and optimized SSIS packages in the company Data Warehouse for extraction, loading, and transformation (ETL) of SQL data, ultimately reduced package run time on servers by factor of 3
-•	Created webpages using REST APIs and React components to handle client billing, data entry and pdf report generation while coding detailed business logic into the interface, maintained security through access permissions and kept audit trails as required by financial institutions
-",
-		Image: "",
-		Skills: [""]
-	],
-	[
-		JobTitle: "",
-		Company: "",
-		Duration: "",
-		Summary: "",
-		Image: "",
-		Skills: [""]
-	],
-	[
-		JobTitle: "",
-		Company: "",
-		Duration: "",
-		Summary: "",
-		Image: "",
-		Skills: [""]
-	],
-}
+[
+	{"JobTitle":"Full Stack Developer Co-op","Company":"SS&C Technologies","Duration":"May '22 - December '22","Summary":"•\tCreated and optimized SSIS packages in the company Data Warehouse for extraction, loading, and transformation (ETL) of SQL data, ultimately reduced package run time on servers by factor of 3 •\tCreated webpages using REST APIs and React components to handle client billing, data entry and pdf report generation while coding detailed business logic into the interface, maintained security through access permissions and kept audit trails as required by financial institutions","Image":"/assets/ssnclogo.png","Skills":["SQL","HTML","ReactJS","SSMS","SSIS","SSRS",""]},
+	{"JobTitle":"Research Assistant HCI Co-op ","Company":"National Research Council","Duration":"January 2020- April 2020","Summary":"•\tFound relevant research articles on online journals and wrote article summaries •\tDesign HCI study using HTML/CSS, storing datasets on Amazon S3 and conducted human experiments using AWS Mechanical Turk, understand human interpretation of Cluster Validity Indexes (CVIs)","Image":"","Skills":["Linux","HTML",""]},
+	{"JobTitle":"Research Assistant ","Company":"University of Toronto","Duration":"Oct 2019 - Dec 2019","Summary":"•\tConducted interviews of Biology PhD candidates and professors to obtain project requirements and constraints, resulting in greater transparency during the development process","Image":"/assets/uoftlogo.png","Skills":["SQL","HTML","ReactJS","Linux",""]},
+]

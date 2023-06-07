@@ -6,16 +6,17 @@
 :root {
     --text-primary: #2B1700;
     --text-secondary: #5F3709;
+    --text-ternary: #a8600f;
     --btn-dark: #8A510F;
     --btn-light: #FFE1A4;
-    --overlay: #ffdb8d90;
+    --overlay: #ffdb8df0;
     --off-white: #fdfdfd;
 }
 
 .work-experience-body {
     font-family: 'Montserrat';
     margin: 0;
-    margin-left: 6em !important;
+    margin-left: 6em;
     padding: 0;
     // width: 50em;
     // background-color: aquamarine;
@@ -26,10 +27,58 @@
     // flex-direction: column;
 }
 
+// Work card related styles
+.work-card{
+    background-color: var(--off-white);
+    display: flex;
+    flex-direction: row;
+    // justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 50em;
+    .work-img{
+        // max-width: 300px;
+        height: 100px;
+        margin-right: 1em;
+    }
+    .work-content .work-title{
+        font-weight: bold;
+        color: var(--text-primary);
+        margin: 0;
+    }
+    .work-location{
+        margin: 0;
+        padding: 0;
+        font-weight:normal;
+        color: var(--text-ternary);
+    }
+    .work-content .work-card-skills{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 25em;
+        .work-card-skill-item{
+            background-color: var(--btn-light);
+            padding: 0.2em 0.5em 0.2em 0.5em;
+            margin: 0.1em;
+            border-radius: 0.5em;
+        }
+    }
+}
+
+
+
+
+
+
+
+// Overlay related styles below
+
 .add-job{
     position: fixed;
-    left: 50em;
-    bottom: 10em;
+    // left: 60em;
+    right:5em;
+    bottom: 5em;
     border-radius: 10em;
     // background-color:rgba(10, 10, 10, 0.4);
     display: flex;
@@ -38,15 +87,14 @@
         background-color:rgba(10, 10, 10, 0.4);
         cursor: pointer;
     }
-    img{
-        // background-color: #2B1700;
-        
-    }
     
 }
 
 .add-job-overlay{
-position: relative;
+position:absolute;
+left: 20em;
+top: 5em;
+
     
     background-color: var(--overlay);
     width: 30em;
@@ -54,7 +102,7 @@ position: relative;
     padding:1em;
     box-shadow: 10px 15px 1px rgba(10,10,10,0.5);
 
-    display: flex;//none;
+    display: none;
     flex-direction: column;
     align-items: center;
 
@@ -89,6 +137,48 @@ position: relative;
             border-color: #ffffff
         };
     }
+
+    .skill-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 25em;
+
+    }
+    .skill-item{
+        background-color: #fdfdfd;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        margin: 0.1em;
+        border-radius: 0.5em;
+        &:hover{
+            background-color: var(--btn-light);
+            color: var(--text-primary);
+    
+            // font-weight: 600;
+            cursor: pointer;
+        }
+    }
+
+    .textarea {
+        display: block;
+        width: 100%;
+        max-width: 30em;
+        overflow: hidden;
+        resize: both;
+        min-height: 40px;
+        line-height: 20px;
+      }
+
+      .textarea[contenteditable]:empty::before {
+        content: "Placeholder still possible";
+        color: gray;
+      }
+    
+    // #Skills{
+    //     width:20em;
+    //     height: 5em;
+    //     // background-color: #2B1700;
+    // }
 
     .json-display{
         // width:100%;
