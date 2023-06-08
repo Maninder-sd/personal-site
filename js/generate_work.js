@@ -1,8 +1,9 @@
 // This coe will read work.txt json and generate the html code
 // It will then append to 
 
-// import data from '../datafiles/work_experience' assert { type: 'json' }
-// console.log(data)
+// import { workData } from "./work_experience";
+
+
 
 
 function generateWorkCards() {
@@ -11,42 +12,40 @@ function generateWorkCards() {
     This function will generate html and place it in the DOM using .innerHTML
     It will also read a file and parse it for a JSON object  
 
+    https://softauthor.com/create-html-element-in-javascript/
+
+    https://stackoverflow.com/questions/34156282/how-do-i-save-json-to-local-text-file
+
+
+
     */
-    console.log("hello world")
-
-    var workCards = []
-
-    const reader = new FileReader("/datafiles/work_experience.txt");
-
-    var jobDetails = {
-        "JobTitle": JobTitle,
-        "Company": Company,
-        "Duration": Duration,
-        "Summary": Summary,
-        "Image": Image,
-        "Skills": Skills,
-    }
+    var workCards = ""
 
 
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < workData.length; i++) {
+        var jobJSON= workData[i];
+        var skillsJSON="";
+        for(var j = 0; j < jobJSON.Skills.length; j++){
+            if (jobJSON.Skills[j]!=""){
+                skillsJSON += `<div class="work-card-skill-item"> `+jobJSON.Skills[j]+`</div>`
+            }
+        }
         var jobCard = `<div class="work-card">
-        <img class="work-img" src="/assets/ssnclogo.png" alt="" />
+        <img class="work-img" src="`+jobJSON.Image+`" alt="" />
         <div class="work-content">
-            <p class="work-title">Full Stack Developer Co-op </p>
-            <p class="work-location">SS&C Technologies  (May 2022 - Dec 2022)</p>
+            <p class="work-title">`+jobJSON.JobTitle+` </p>
+            <p class="work-location">`+jobJSON.Company + ' ('+ jobJSON.Duration+`)</p>
             <p class="work-summary">
-                Created and optimized SSIS packages in the company Data Warehouse for extraction, loading, and transformation (ETL) of SQL data, ultimately reduced package run time on servers by factor of 3
+            `+jobJSON.Summary+`
             </p>
-            <div class="work-card-skills">
-                <div class="work-card-skill-item"> SQL</div>
-                <div class="work-card-skill-item"> HTML</div>
-                <div class="work-card-skill-item"> SSIS</div>
-                <div class="work-card-skill-item"> ReactJS</div>
+            <div class="work-card-skills">`
+            +skillsJSON+
+            `
             </div>
     
         </div>
     </div>`;
-        workCards.push(jobCard)
+        workCards+=jobCard
     }
 
 
@@ -100,3 +99,18 @@ function generateJSON() {
 // First run 
 
 generateWorkCards()
+// import workData from '../datafiles/work_experience' assert { type: 'json' }
+// console.log(workData)
+// const fs=require('fs')
+// fs.readFile('work_experience.txt','utf-8', (err, jsonString)=>{
+//     if (err) throw err;
+//     console.log(jsonString)
+// })
+// console.log("im trying to read a file", JSON.stringify(workData));
+for (var i=0; i<workData.length; i++){
+    console.log(JSON.stringify(workData[i]))
+}
+
+// const reader = new FileReader("datafiles/work_experience.js");
+
+// console.log(reader.result);
