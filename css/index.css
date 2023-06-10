@@ -14,6 +14,7 @@ body {
   padding: 0;
   background-image: url(/assets/Linen_background.png);
   background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .navbar .logo {
@@ -120,6 +121,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 
 .footer h1 {

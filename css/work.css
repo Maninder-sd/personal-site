@@ -33,6 +33,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 1em;
+  margin-bottom: 2em;
   width: 50em;
 }
 
@@ -45,6 +46,11 @@
   font-weight: bold;
   color: var(--text-primary);
   margin: 0;
+}
+
+.work-card .work-summary {
+  white-space: pre-line;
+  margin-top: 0;
 }
 
 .work-card .work-location {
@@ -64,7 +70,7 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 25em;
+  max-width: 35em;
 }
 
 .work-card .work-content .work-card-skills .work-card-skill-item {
@@ -139,6 +145,7 @@
 
 .add-job-overlay form input {
   background-color: var(--off-white);
+  width: 20em;
   border-width: 0.1em;
   border-color: #ffffff;
 }
@@ -171,7 +178,7 @@
 
 .add-job-overlay .textarea {
   display: block;
-  width: 100%;
+  width: 20em;
   max-width: 30em;
   overflow: hidden;
   resize: both;

@@ -35,6 +35,7 @@
     // justify-content: center;
     align-items: center;
     padding: 1em;
+    margin-bottom: 2em;
     width: 50em;
     .work-img{
         // max-width: 300px;
@@ -46,6 +47,10 @@
         color: var(--text-primary);
         margin: 0;
     }
+    .work-summary{
+        white-space:pre-line;
+        margin-top: 0;
+    }
     .work-location{
         margin: 0;
         padding: 0;
@@ -56,7 +61,7 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 25em;
+        max-width: 35em;
         .work-card-skill-item{
             background-color: var(--btn-light);
             padding: 0.2em 0.5em 0.2em 0.5em;
@@ -131,6 +136,7 @@ top: 5em;
         input{
             // background-color: whi
             background-color: var(--off-white);
+            width: 20em;
             // border-radius: 0.2em;
             // border: none;
             border-width: 0.1em;
@@ -161,7 +167,7 @@ top: 5em;
 
     .textarea {
         display: block;
-        width: 100%;
+        width: 20em;
         max-width: 30em;
         overflow: hidden;
         resize: both;

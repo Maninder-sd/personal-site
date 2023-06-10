@@ -16,6 +16,10 @@ body {
     padding: 0;
     background-image: url(/assets/Linen_background.png);
     background-attachment: fixed;
+    min-height: 100vh;
+    // position:  relative;
+    // display: flex;
+    // flex-direction: row;
 }
 
 
@@ -107,6 +111,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    // align-self: flex-end;
+    // position:absolute;
+    // position: absolute;
+    width: 100%;
+    // bottom: 2em;
+//    left: 0;
+//    bottom: 0;
+//    width: 100%;
 
     h1 {
         // font-family: 'times new roman';
