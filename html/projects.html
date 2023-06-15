@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/projects.css">
+    <title>Maninder Dhanauta</title>
+</head>
+
+<div class="work-experience-body">
+
+    <h2>Here are some of my projects: </h2>
+
+
+    <div id="work-list">
+        <!-- JS will place the cards here, see generate_work.js generateWorkCards() -->
+        <div class="work-card" id="exp-card-1" onmouseover="expandCard('exp-card-1')"
+            onmouseleave="collapseCard('exp-card-1')">
+            <div class="card-top">
+                <div class="work-learn-more-sec">
+                    <img class="work-img" src="/assets/ssnclogo.png" alt="" />
+                    <div class="learn-more-show btn" onclick="window.open('http://www.google.com/')">
+                        <p>Learn More</p>
+                    </div>
+                </div>
+
+                <div class="work-content">
+                    <p class="work-title">Full Stack Developer Co-op <span class="exp-duration"> (May 2022 - Dec 2022)
+                        </span>
+                    </p>
+                    <p class="work-summary">
+                        Created and optimized SSIS packages in the company Data Warehouse for extraction, loading, and
+                        transformation (ETL) of SQL data, ultimately reduced package run time on servers by factor of 3
+                    </p>
+                    <div class="work-card-skills">
+                        <div class="work-card-skill-item"> SQL</div>
+                        <div class="work-card-skill-item"> HTML</div>
+                        <div class="work-card-skill-item"> SSIS</div>
+                        <div class="work-card-skill-item"> ReactJS</div>
+                        <div class="work-card-skill-item"> SQL</div>
+                        <div class="work-card-skill-item"> HTML</div>
+                        <div class="work-card-skill-item"> SSIS</div>
+                        <div class="work-card-skill-item"> ReactJS</div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+            <div id="bottom-exp-card-1" class="expand-card-on">
+                <div class="extra-images">
+                    <img class="extra-img" src="/assets/ssnclogo.png" alt="" />
+                    <!-- <img class="extra-img" src="/assets/ssnclogo.png" alt="" />
+                    <img class="extra-img" src="/assets/ssnclogo.png" alt="" /> -->
+                    <img class="extra-img" src="/assets/uoftlogo.png" alt="" />
+                </div>
+                <div class="add-details">
+                    <p>ompany Data Warehouse for extraction, loading, and transformation (ETL) of SQL data, ultimately
+                        reduced package run time on servers by factor of 3\n•\tCreated webpages using REST APIs and
+                        React components to handle client billing, data entry and pdf report generation while coding
+                        detailed business logic into the interface, maintained security through access permissions and
+                        kept audit trails as required by financial </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- <div class="work-card" id="exp-card-2" onmouseover="expandCard('exp-card-2')"
+            onmouseleave="collapseCard('exp-card-2')">
+            <div class="card-top">
+                <img class="work-img" src="/assets/ssnclogo.png" alt="" />
+                <div class="work-content">
+                    <p class="work-title">Full Stack Developer Co-op <span class="exp-duration"> (May 2022 - Dec 2022)
+                        </span> </p>
+                    <p class="work-summary">
+                        Created and optimized SSIS packages in the company Data Warehouse for extraction, loading, and
+                        transformation (ETL) of SQL data, ultimately reduced package run time on servers by factor of 3
+                    </p>
+                    <div class="work-card-skills">
+                        <div class="work-card-skill-item"> SQL</div>
+                        <div class="work-card-skill-item"> HTML</div>
+                        <div class="work-card-skill-item"> SSIS</div>
+                        <div class="work-card-skill-item"> ReactJS</div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="bottom-exp-card-2" class="expand-card-off">
+                <div class="extra-images">
+                    <img class="extra-img" src="/assets/ssnclogo.png" alt="" />
+                    <img class="extra-img" src="/assets/ssnclogo.png" alt="" />
+                    <img class="extra-img" src="/assets/ssnclogo.png" alt="" />
+                    <img class="extra-img" src="/assets/ssnclogo.png" alt="" />
+                </div>
+                <div class="add-details">
+                    <p>ompany Data Warehouse for extraction, loading, and transformation (ETL) of SQL data, ultimately
+                        reduced package run time on servers by factor of 3\n•\tCreated webpages using REST APIs and
+                        React components to handle client billing, data entry and pdf report generation while coding
+                        detailed business logic into the interface, maintained security through access permissions and
+                        kept audit trails as required by financial </p>
+                </div>
+
+            </div>
+
+        </div> -->
+    </div>
+
+
+    <div class="add-job" onclick="openAddJobOverlay()">
+        <img src="/assets/add.png" title="Add work experience">
+    </div>
+
+    <div id="add-job-overlay" class="add-job-overlay">
+        <img class="close-work-overlay" src="/assets/exit.png" onclick="closeAddJobOverlay()">
+        <p>Fill in the following info</p>
+        <form id="work-form">
+            <div class="text">
+                <label for="exp-title">Project Title:</label><br>
+                <input type="text" id="exp-title" name="exp-title">
+            </div>
+            <div class="text">
+                <label for="Duration">Duration:</label><br>
+                <input type="text" id="Duration" name="Duration" value=""><br>
+            </div>
+
+
+            <div class="text">
+                <label for="learn-more-link">Learn More Link:</label><br>
+                <input type="text" id="learn-more-link" name="learn-more-link">
+            </div>
+
+            <div class="text">
+                <label for="Summary">Summary:</label><br>
+                <textarea type="text" class="textarea" id="Summary" name="Summary" value=""></textarea><br>
+            </div>
+            <div class="text">
+                <label for="add-details">Additional Details:</label><br>
+                <textarea type="text" class="textarea" id="add-details" name="add-details" value=""></textarea><br>
+            </div>
+
+            <div class="checkbox">
+                <label for="hover-expand">Expand on hover:</label><br>
+                <input type="checkbox" id="hover-expand" name="hover-expand">
+            </div>
+
+            <div class="text">
+                <label for="Images">Image:</label><br>
+                <input type="text" id="Image" name="Image" value=""><br>
+            </div>
+
+
+
+
+
+            <br>
+            <label>Select Skills:</label>
+            <div class="skill-list">
+                <div class="skill-item SQL" onclick="appendToSkills('SQL')">SQL</div>
+                <div class="skill-item HTML" onclick="appendToSkills('HTML')">HTML</div>
+                <div class="skill-item ReactJS" onclick="appendToSkills('ReactJS')">ReactJS</div>
+                <div class="skill-item Linux" onclick="appendToSkills('Linux')">Linux</div>
+                <div class="skill-item SSMS" onclick="appendToSkills('SSMS')">SSMS</div>
+                <div class="skill-item SSIS" onclick="appendToSkills('SSIS')">SSIS</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('SSRS')">SSRS</div>
+
+            </div>
+            <div class="text">
+                <p> <textarea class="textarea" id="Skills" name="Skills"></textarea></p>
+            </div>
+
+            <br>
+        </form>
+        <div id="json-display" class="json-display">
+            <p id="json-display-text" class="json-display-text">
+                Click Generate JSON
+            </p>
+        </div>
+        <div class="json-btns">
+            <div class="generate-json btn" onclick="generateJSON()">
+                <p>Generate JSON</p>
+            </div>
+            <div class="download-json btn" onclick="downloadEntireJSON()">
+                <p>Download Entire JSON</p>
+            </div>
+        </div>
+        <p>Now copy paste this into the txt file, commit to github, and wait. The struggles with static webpages:( </p>
+    </div>
+
+</div>
+<script type="text/javascript" src="/datafiles/work_experience.js"></script>
+<script type="text/javascript" src="/js/generate_projects.js"></script>
+
+
+</html>

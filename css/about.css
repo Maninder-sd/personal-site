@@ -6,6 +6,7 @@
   --text-secondary: #5F3709;
   --btn-dark: #8A510F;
   --btn-light: #FFE1A4;
+  --dark-card: #DFCA9F;
 }
 
 body {
@@ -47,7 +48,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 7em;
-  background-color: #DFCA9F;
+  background-color: var(--dark-card);
   padding: 1.5em;
   margin-top: 5em;
   border-radius: 0.5em;

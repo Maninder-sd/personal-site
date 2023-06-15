@@ -5,3 +5,11 @@ var workData= [
 	{"JobTitle":"Research Assistant HCI Co-op ","Company":"National Research Council","Duration":"January 2020- April 2020","Summary":"•\tFound relevant research articles on online journals and wrote article summaries •\tDesign HCI study using HTML/CSS, storing datasets on Amazon S3 and conducted human experiments using AWS Mechanical Turk, understand human interpretation of Cluster Validity Indexes (CVIs)","Image":"","Skills":["Linux","HTML",""]},
 	{"JobTitle":"Research Assistant ","Company":"University of Toronto","Duration":"Oct 2019 - Dec 2019","Summary":"•\tConducted interviews of Biology PhD candidates and professors to obtain project requirements and constraints, resulting in greater transparency during the development process","Image":"/assets/uoftlogo.png","Skills":["SQL","HTML","ReactJS","Linux",""]},
 ]
+
+var projectData = [
+
+	{"ExpTitle":"Heuristic Usability Evaluation – torontopolice.on.ca ","Duration":"July 2021– July 2021","Link":"https://google.com","Summary":"•\tUsed Jakob Neilson’s usability heuristics to identify over 15 usability issues on the Toronto Police department website\n•\tSuggested improvements, including UI elements such as accordion and breadcrumbs to organize information and provide status of system, and providing a low fidelity prototype of solutions\n","AddDetails":"obamam is gey","HoverExpand":true,"Image":["/assets/ssnclogo.png","/assets/uoftlogo.png","/assets/ssnclogo.png","/assets/uoftlogo.png",""],"Skills":["NN group heuristics","low-fidelity mockups","Report writing","Presentation"]},
+
+	{"ExpTitle":"Heuristic Usability Evaluation – torontopolice.on.ca ","Duration":"July 2021– July 2021","Link":"/temp_projects_folder/picards.html","Summary":"•\tUsed Jakob Neilson’s usability heuristics to identify over 15 usability issues on the Toronto Police department website\n•\tSuggested improvements, including UI elements such as accordion and breadcrumbs to organize information and provide status of system, and providing a low fidelity prototype of solutions\n","AddDetails":"obamam is gey","HoverExpand":false,"Image":["/assets/ssnclogo.png","/assets/uoftlogo.png","/assets/ssnclogo.png","/assets/uoftlogo.png",""],"Skills":["NN group heuristics","low-fidelity mockups","Report writing","Presentation"]},
+
+]
