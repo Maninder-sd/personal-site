@@ -37,7 +37,7 @@ function generateExpCards() {
             }
         }
 
-        var expCard = `        <div class="work-card" id="exp-card-`+i+`" onmouseover="expandCard('exp-card-`+i+`')"
+        var expCard = `        <div class="work-card" id="exp-card-`+i+`" 
         onmouseleave="collapseCard('exp-card-`+i+`')">
         <div class="card-top">
             <div class="work-learn-more-sec">
@@ -59,9 +59,14 @@ function generateExpCards() {
 
                 </div>
 
+            `+
 
-
-            </div>
+            (expJSON.HoverExpand?`<div class="expand-on-hover" onclick="expandCard('exp-card-`+i+`')">
+            <img src="/assets/down_arrow.png" alt="" class="down-arrow">
+        </div>`:'')
+            
+            +
+            `</div>
         </div>
         <div id="bottom-exp-card-`+i+`" class="expand-card-`+(expJSON.HoverExpand?'on':'off')+`">
             <div class="extra-images">

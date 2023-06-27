@@ -16,8 +16,7 @@
 
     <div id="work-list">
         <!-- JS will place the cards here, see generate_work.js generateWorkCards() -->
-        <div class="work-card" id="exp-card-1" onmouseover="expandCard('exp-card-1')"
-            onmouseleave="collapseCard('exp-card-1')">
+        <div class="work-card" id="exp-card-1" onmouseleave="collapseCard('exp-card-1')">
             <div class="card-top">
                 <div class="work-learn-more-sec">
                     <img class="work-img" src="/assets/ssnclogo.png" alt="" />
@@ -45,7 +44,9 @@
                         <div class="work-card-skill-item"> ReactJS</div>
 
                     </div>
-
+                    <div class="expand-on-hover" onclick="expandCard('exp-card-1')">
+                        <img src="/assets/down_arrow.png" alt="" class="down-arrow">
+                    </div>
 
 
                 </div>

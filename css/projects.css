@@ -19,6 +19,7 @@
   padding: 0;
   background-image: url(/assets/Linen_background.png);
   background-attachment: fixed;
+  padding-bottom: 50vh;
 }
 
 .work-card {
@@ -70,7 +71,7 @@
 }
 
 .card-top .work-img {
-  height: 100px;
+  width: 130px;
 }
 
 .card-top .work-content .work-title {
@@ -109,6 +110,28 @@
   padding: 0.2em 0.5em 0.2em 0.5em;
   margin: 0.1em;
   border-radius: 0.5em;
+}
+
+.expand-on-hover {
+  background-color: #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5em;
+  padding: 0.2em;
+}
+
+.expand-on-hover .down-arrow {
+  height: 15px;
+}
+
+.expand-on-hover:hover {
+  background-color: var(--btn-light);
+  color: var(--text-primary);
+  cursor: pointer;
 }
 
 .learn-more-show.btn {

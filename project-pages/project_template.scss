@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
+:root {
+    --text-primary: #2B1700;
+    --text-secondary: #5F3709;
+    --text-ternary: #a8600f;
+    --btn-dark: #8A510F;
+    --btn-light: #FFE1A4;
+    --overlay: #ffdb8df0;
+    --off-white: #fdfdfd;
+    --dark-card: #DFCA9F;
+}
+
+// body {
+//     font-family: 'Montserrat';
+//     margin: 0;
+//     margin-left: 6em;
+//     padding: 0;
+//     // width: 50em;
+//     // background-color: aquamarine;
+//     background-image: url(/assets/Linen_background.png);
+//     // background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     // display: flex;
+//     // flex-direction: column;
+//     padding-bottom: 50vh;
+// }
+
+body {
+    font-family: 'Montserrat';
+    margin: 6em;
+    // margin-left: 6em;
+    padding: 0;
+    // width: 50em;
+    // background-color: aquamarine;
+    // background-image: url(/assets/Linen_background.png);
+    // background-repeat: no-repeat;
+    background-attachment: fixed;
+    // display: flex;
+    // flex-direction: column;
+    padding-bottom: 50vh;
+    // width: 50em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
