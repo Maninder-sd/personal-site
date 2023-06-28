@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+:root {
+  --text-primary: #2B1700;
+  --text-secondary: #5F3709;
+  --text-ternary: #a8600f;
+  --btn-dark: #8A510F;
+  --btn-light: #FFE1A4;
+  --overlay: #ffdb8df0;
+  --off-white: #fdfdfd;
+  --dark-card: #DFCA9F;
+}
+
+.work-experience-body {
+  font-family: 'Montserrat';
+  margin: 0;
+  margin-left: 6em;
+  padding: 0;
+  background-image: url(/assets/Linen_background.png);
+  background-attachment: fixed;
+  padding-bottom: 50vh;
+}
+
+.work-card {
+  background-color: var(--off-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  margin-bottom: 2em;
+  width: 50em;
+}
+
+.card-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+}
+
+.card-top .work-learn-more-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2em;
+}
+
+.card-top .work-img {
+  width: 130px;
+}
+
+.card-top .work-content .work-title {
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.card-top .work-summary {
+  white-space: pre-line;
+  margin-top: 0;
+}
+
+.card-top .exp-duration {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: var(--text-ternary);
+}
+
+.card-top .work-content .work-card-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 35em;
+}
+
+.card-top .work-content .work-card-skills .work-card-skill-item {
+  background-color: var(--btn-light);
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.1em;
+  border-radius: 0.5em;
+}
+
+.expand-on-hover {
+  background-color: #efefef;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 0.5em;
+  padding: 0.2em;
+}
+
+.expand-on-hover .down-arrow {
+  height: 15px;
+}
+
+.expand-on-hover:hover {
+  background-color: var(--btn-light);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.learn-more-show.btn {
+  position: relative;
+  border-radius: 0.5em;
+  margin-top: 1.5em;
+  -webkit-box-shadow: 3px 5px 1px rgba(10, 10, 10, 0.4);
+          box-shadow: 3px 5px 1px rgba(10, 10, 10, 0.4);
+}
+
+.learn-more-show.btn:hover {
+  -webkit-box-shadow: 5px 7px 1px rgba(10, 10, 10, 0.4);
+          box-shadow: 5px 7px 1px rgba(10, 10, 10, 0.4);
+}
+
+.learn-more-hide.btn {
+  display: none;
+}
+
+.btn {
+  background-color: var(--btn-dark);
+  color: white;
+  height: 2.2em;
+  padding: 0 1em 0 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--btn-light);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.expand-card-off {
+  display: none;
+}
+
+.expand-card-on {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.expand-card-on .extra-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.expand-card-on .extra-images .extra-img {
+  width: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.add-job {
+  position: fixed;
+  right: 5em;
+  bottom: 5em;
+  border-radius: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.add-job:hover {
+  background-color: rgba(10, 10, 10, 0.4);
+  cursor: pointer;
+}
+
+.add-job-overlay {
+  position: absolute;
+  left: 20em;
+  top: 5em;
+  background-color: var(--overlay);
+  width: 30em;
+  margin: 0;
+  padding: 1em;
+  -webkit-box-shadow: 10px 15px 1px rgba(10, 10, 10, 0.5);
+          box-shadow: 10px 15px 1px rgba(10, 10, 10, 0.5);
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-job-overlay .close-work-overlay {
+  width: 40px;
+  position: absolute;
+  right: 20px;
+}
+
+.add-job-overlay .close-work-overlay:hover {
+  background-color: var(--off-white);
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.add-job-overlay form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-job-overlay form input {
+  background-color: var(--off-white);
+  width: 20em;
+  border-width: 0.1em;
+  border-color: #ffffff;
+}
+
+.add-job-overlay .skill-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 25em;
+}
+
+.add-job-overlay .skill-item {
+  background-color: #fdfdfd;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.1em;
+  border-radius: 0.5em;
+}
+
+.add-job-overlay .skill-item:hover {
+  background-color: var(--btn-light);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.add-job-overlay .textarea {
+  display: block;
+  width: 20em;
+  max-width: 30em;
+  overflow: hidden;
+  resize: both;
+  min-height: 40px;
+  line-height: 20px;
+}
+
+.add-job-overlay .textarea[contenteditable]:empty::before {
+  content: "Placeholder still possible";
+  color: gray;
+}
+
+.add-job-overlay .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.add-job-overlay .checkbox input {
+  width: 2em;
+}
+
+.add-job-overlay .json-display {
+  font-family: 'Courier';
+  background-color: var(--off-white);
+  padding: 0.5em;
+  border: 0.1em;
+  border-style: inset;
+  margin-bottom: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 100%;
+}
+
+.add-job-overlay .json-display-text {
+  max-width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  word-break: break-all;
+  white-space: normal;
+}
+
+.add-job-overlay .json-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.add-job-overlay .btn {
+  background-color: var(--btn-dark);
+  color: white;
+  height: 2.2em;
+  padding: 0 1em 0 1em;
+  margin-right: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.add-job-overlay .btn:hover {
+  background-color: var(--btn-light);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.add-job-overlay .download-json {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+/*# sourceMappingURL=projects.css.map */

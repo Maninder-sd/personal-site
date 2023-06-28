@@ -5,15 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url = /html/landing.html" /> 
-    <link rel="stylesheet" href="./index.css">
-    <title>Maninder's Website</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Maninder Dhanauta</title>
 </head>
 
 <body>
+    <div class="navbar">
+        <!-- <div class="logo">
+            <a class="firstName" href="/html/about.html">Maninder</a>
+            <a class="lastName" href="/html/about.html">Dhanauta</a>
+        </div> -->
+        <nav>
+            <ul class="nav-list">
+                <li id="about-li" class="nav-li">
+                    <a class="about-txt nav-txt" href="#about" onclick="navItemOnClick(this, 'about')">
+                        About
+                        <div class="about-tracker nav-tracker"> </div>
+                    </a>
+                </li>
+                <li id="work-li" class="nav-li">
+                    <a class="work-txt nav-txt" href="#work" onclick="navItemOnClick(this, 'work')">
+                        Work Experience
+                        <div class="work-tracker nav-tracker"> </div>
+                    </a>
+
+                </li>
+                <li id="projects-li" class="nav-li">
+                    <a class="projects-txt nav-txt" href="#projects" onclick="navItemOnClick(this, 'projects')">
+                        Projects
+                        <div class="projects-tracker nav-tracker"> </div>
+                    </a>
+                </li>
+                <!-- <li> <a href="#">Work Experience</a> </li>
+                <li> <a href="#">Projects</a> </li> -->
+            </ul>
+        </nav>
+    </div>
+    <!-- Loads the page content -->
+    <div id="page-content-placeholder"> </div>
+
+    <section class="footer">
+
+        <h1>
+            Last edit June 28, 2023 | Website is under construction!
+        </h1>
+        <img src="/assets/settings.png" style="margin-left:0.1em" alt="">
+    </section>
 
 </body>
 
-
+<script src="/js/navbar.js"></script>
 
 </html>

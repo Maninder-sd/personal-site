@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+
+:root {
+    --text-primary: #2B1700;
+    --text-secondary: #5F3709;
+    --btn-dark: #8A510F;
+    --btn-light: #FFE1A4;
+}
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/Linen_background.png);
+    background-attachment: fixed;
+    min-height: 100vh;
+    // position:  relative;
+    // display: flex;
+    // flex-direction: row;
+}
+
+
+.navbar .logo {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+
+    a {
+        text-decoration: none;
+        color: var(--text-primary);
+        font-size: 2.1em;
+        font-family: 'Fredericka the Great', cursive;
+    }
+
+    .lastName {
+        position: relative;
+        // top:-1.2em;
+        left: 1.6em;
+    }
+}
+
+// Common defualt styles
+.navbar .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin-left: 6em;
+    margin-top: 2em;
+    list-style-type: none;
+    background-color: #f5d189;
+    width: 50em;
+    height: 2.5em;
+    border-radius: 0.4em;
+
+    .nav-li {
+        // background-color: #FFE1A4;
+        padding: 0 1.5em 0 1.5em;
+        height: 90%;
+        border-radius: 0.4em;
+        margin-left: 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .nav-txt {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: larger;
+
+            &:hover {
+                // font-weight: bold;
+                // color: #8A510F;
+                color: white;
+                // font-weight: 600;
+            }
+
+            .nav-tracker {
+                visibility: hidden;
+                height: 0.1em;
+                background-color: var(--text-primary);
+                position: relative;
+                top: 0.2em
+            }
+        }
+    }
+
+    // js will change the tags of nav bar 
+    .nav-li.current-selection {
+        background-color: #FFE1A4;
+
+        .nav-txt {
+            text-decoration: none;
+            color: var(--text-primary);
+
+            .nav-tracker {
+                visibility: visible;
+
+            }
+        }
+    }
+
+}
+
+.footer {
+    height: 2em;
+    background-color: #122830;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // align-self: flex-end;
+    // position:absolute;
+    // position: absolute;
+    width: 100%;
+    // bottom: 2em;
+//    left: 0;
+//    bottom: 0;
+//    width: 100%;
+
+    h1 {
+        // font-family: 'times new roman';
+        text-align: center;
+        font-weight: normal;
+        color: white;
+        font-size: 0.7em;
+    }
+}

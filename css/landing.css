@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+:root {
+  --text-primary: #2B1700;
+  --text-secondary: #5F3709;
+  --btn-dark: #8A510F;
+  --btn-light: #FFE1A4;
+}
+
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+  background-image: url(/assets/Linen_background.png);
+  background-attachment: fixed;
+}
+
+.hero-page {
+  font-family: 'Montserrat';
+  margin: 0;
+  margin-left: 6em;
+  margin-top: 2em;
+  width: 50em;
+  background-attachment: fixed;
+}
+
+.intro .greeting {
+  margin: 3em 0 2em 0;
+}
+
+.intro p {
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: larger;
+}
+
+.recent-project-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7em;
+  background-color: #DFCA9F;
+  padding: 1.5em;
+  margin-top: 5em;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 20px 15px 1px rgba(10, 10, 10, 0.4);
+          box-shadow: 20px 15px 1px rgba(10, 10, 10, 0.4);
+}
+
+.recent-project-card .project-img {
+  height: 100%;
+}
+
+.recent-project-card .project-img img {
+  height: 100%;
+}
+
+.btn {
+  background-color: var(--btn-dark);
+  color: white;
+  height: 2.2em;
+  padding: 0 1em 0 1em;
+  margin-right: 1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.btn:hover {
+  background-color: var(--btn-light);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.recent-project-card .project-body {
+  height: 100%;
+  margin-left: 1em;
+}
+
+.recent-project-card .project-body .recent-project-txt {
+  font-size: larger;
+  margin: 0;
+}
+
+.recent-project-card .project-body .project-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main-body {
+  margin-top: 8em;
+  padding-top: 3em;
+  background-color: white;
+}
+
+.body-text {
+  margin: 0;
+  margin-left: 6em;
+  margin-top: 2em;
+  width: 50em;
+}
+
+.body-text p {
+  color: var(--text-secondary);
+  font-weight: 700;
+  font-size: larger;
+}
+
+.body-text .contact-info {
+  font-weight: 500;
+  font-size: medium;
+  margin: 0;
+}
+/*# sourceMappingURL=landing.css.map */
