@@ -27,6 +27,26 @@
     // flex-direction: column;
 }
 
+.filter-exps{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+
+    .filter-item{
+        background-color: var(--btn-dark);
+        color: var(--off-white);
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        margin: 0.1em;
+        border-radius: 0.5em;
+
+        &:hover {
+            background-color:var(--btn-light);
+            color: var(--text-secondary);
+            cursor: pointer;
+        }
+    }
+}
+
 // Work card related styles
 .work-card{
     background-color: var(--off-white);

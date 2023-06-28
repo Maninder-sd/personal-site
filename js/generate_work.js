@@ -4,7 +4,7 @@
 // import { workData } from "./work_experience";
 
 
-
+var filterType = "clear"; //clear, fullstack, mathematics, research
 
 function generateWorkCards() {
 
@@ -24,6 +24,11 @@ function generateWorkCards() {
 
     for (var i = 0; i < workData.length; i++) {
         var jobJSON= workData[i];
+        if(filterType!="clear"){
+            if (jobJSON.ExpType!=filterType){
+                continue
+            }
+        }
         var skillsJSON="";
         for(var j = 0; j < jobJSON.Skills.length; j++){
             if (jobJSON.Skills[j]!=""){
@@ -55,6 +60,12 @@ function generateWorkCards() {
 
 }
 
+function filterFor(expType){
+    console.log("setting filter to "+expType)
+    filterType=expType;
+    generateWorkCards();
+}
+
 
 function openAddJobOverlay() {
     document.getElementById("add-job-overlay").style.display = "flex";
@@ -81,6 +92,7 @@ function generateJSON() {
     var Duration = document.getElementById("Duration").value;
     var Summary = document.getElementById("Summary").value;
     var Image = document.getElementById("Image").value;
+    var ExpType = document.getElementById("exp-type").value;
     var Skills = document.getElementById("Skills").value.split(";");
 
     var newJob = {
@@ -89,6 +101,7 @@ function generateJSON() {
         "Duration": Duration,
         "Summary": Summary,
         "Image": Image,
+        "ExpType": ExpType,
         "Skills": Skills,
     }
 

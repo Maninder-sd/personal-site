@@ -9,9 +9,16 @@
     <title>Maninder Dhanauta</title>
 </head>
 
-<div class="work-experience-body" >
+<div class="work-experience-body">
 
-    <h2>Here are my Work Experiences: </h2> 
+    <h2>Filter for skill-specific paid experiences (I'm adding more to this page soon)</h2>
+    <div class="filter-exps">
+        <!-- <p>Filter for skill specific experiences</p> -->
+        <div class="filter-item fullstack" onclick="filterFor('fullstack')">Fullstack</div>
+        <div class="filter-item mathematics" onclick="filterFor('mathematics')">Mathematics</div>
+        <div class="filter-item research" onclick="filterFor('research')">Research Assistant</div>
+        <div class="filter-item clear" onclick="filterFor('clear')" >X</div>
+    </div>
 
 
     <div id="work-list">
@@ -67,6 +74,16 @@
                 <input type="text" id="Image" name="Image" value=""><br>
             </div>
 
+            <div class="job-type">
+                <br>
+                <label for="exp-type">Type of experience:</label>
+                <select id="exp-type" name="exp-type">
+                    <option value="fullstack">Fullstack</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="research">Research Assistant</option>
+                </select>
+            </div>
+
 
 
 
@@ -75,12 +92,22 @@
             <label>Select Skills:</label>
             <div class="skill-list">
                 <div class="skill-item SQL" onclick="appendToSkills('SQL')">SQL</div>
-                <div class="skill-item HTML" onclick="appendToSkills('HTML')">HTML</div>
+                <div class="skill-item HTML" onclick="appendToSkills('HTML/CSS/JS')">HTML</div>
                 <div class="skill-item ReactJS" onclick="appendToSkills('ReactJS')">ReactJS</div>
                 <div class="skill-item Linux" onclick="appendToSkills('Linux')">Linux</div>
                 <div class="skill-item SSMS" onclick="appendToSkills('SSMS')">SSMS</div>
                 <div class="skill-item SSIS" onclick="appendToSkills('SSIS')">SSIS</div>
                 <div class="skill-item SSRS" onclick="appendToSkills('SSRS')">SSRS</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('Agile')">Agile</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('Fortran')">Fortran</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('Express')">Express</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('Python(Plotly, Pandas)')">Python(Plotly, Pandas)
+                </div>
+                <div class="skill-item SSRS" onclick="appendToSkills('MongoDB')">MongoDB</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('MVC')">MVC</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('NodeJS')">NodeJS</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('REST APIs')">REST APIs</div>
+                <div class="skill-item SSRS" onclick="appendToSkills('Postman')">Postman</div>
 
             </div>
             <div class="text">

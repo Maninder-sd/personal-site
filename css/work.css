@@ -20,6 +20,31 @@
   background-attachment: fixed;
 }
 
+.filter-exps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 2em;
+}
+
+.filter-exps .filter-item {
+  background-color: var(--btn-dark);
+  color: var(--off-white);
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.1em;
+  border-radius: 0.5em;
+}
+
+.filter-exps .filter-item:hover {
+  background-color: var(--btn-light);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
 .work-card {
   background-color: var(--off-white);
   display: -webkit-box;
