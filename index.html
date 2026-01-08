@@ -2,59 +2,437 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link rel="stylesheet" href="/css/index.css">
-    <title>Maninder Dhanauta</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <title>My Projects</title>
 </head>
 
+<style>
+  body {
+    font-family: 'arial';
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/Linen_background.png);
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200vh;
+    font-size: large;
+  }
+
+  .entry-container {
+    height: 100vh;
+    margin-top: 20px;
+  }
+
+  .container-header {
+    background-color: #571216;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-header h2 {
+    color: white;
+    padding: 0;
+    margin: 0;
+  }
+
+  .my-carousel-item {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    /* background-color: aqua; */
+  }
+
+  .inh {
+    height: 100%;
+  }
+
+  .center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+  }
+
+  .my-control {
+    background-color: grey;
+
+    /* height: 30px;
+    border-radius: 1; */
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: left;
+    margin: 10px 0;
+  }
+
+  .filter {
+    background-color: #ba4073;
+    color: white;
+    font-weight: 400;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+  }
+
+  .filter:hover {
+    background-color: #571216;
+  }
+
+  .filter.active {
+    background-color: #571216;
+  }
+
+  .summary p {
+    display: none;
+  }
+
+  .summary p:first-child {
+    display: block;
+  }
+
+  .summary {
+    background-color: #571216;
+    color: white;
+    font-weight: 500;
+    padding: 30px;
+    border-radius: 10px;
+    border: solid 8px #921f45;
+    height: fit-content;
+    transition: height 0.15s;
+  }
+</style>
+
 <body>
-    <div class="navbar">
-        <!-- <div class="logo">
-            <a class="firstName" href="/html/about.html">Maninder</a>
-            <a class="lastName" href="/html/about.html">Dhanauta</a>
-        </div> -->
-        <nav>
-            <ul class="nav-list">
-                <li id="about-li" class="nav-li">
-                    <a class="about-txt nav-txt" href="#about" onclick="navItemOnClick(this, 'about')">
-                        About
-                        <div class="about-tracker nav-tracker"> </div>
-                    </a>
-                </li>
-                <li id="work-li" class="nav-li">
-                    <a class="work-txt nav-txt" href="#work" onclick="navItemOnClick(this, 'work')">
-                        Work Experience
-                        <div class="work-tracker nav-tracker"> </div>
-                    </a>
+  <h2 style="font-weight:900">Welcome to my private site.</h2>
+  <p style="font-weight:bold">Here are some of the projects I've worked on. They include both work projects and personal
+    projects.</p>
 
-                </li>
-                <li id="projects-li" class="nav-li">
-                    <a class="projects-txt nav-txt" href="#projects" onclick="navItemOnClick(this, 'projects')">
-                        Projects
-                        <div class="projects-tracker nav-tracker"> </div>
-                    </a>
-                </li>
-                <!-- <li> <a href="#">Work Experience</a> </li>
-                <li> <a href="#">Projects</a> </li> -->
-            </ul>
-        </nav>
+
+  <!-- FGF Brands -->
+  <div id="fgfbrands" class="row center-column entry-container">
+    <div class="container-header">
+      <h2 style="width:fit-content">.NET FullStack @ FGF Brands</h2>
     </div>
-    <!-- Loads the page content -->
-    <div id="page-content-placeholder"> </div>
 
-    <section class="footer">
 
-        <h1>
-            Last edit June 28, 2023 | Website is under construction!
-        </h1>
-        <img src="/assets/settings.png" style="margin-left:0.1em" alt="">
-    </section>
+    <div id="fgfbrands-carousel" class="carousel slide my-carousel">
+      <!-- <div class="carousel-indicators">
+        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div> -->
+      <div class="carousel-inner ">
+        <!-- p1 -->
+        <div class="carousel-item active p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/1.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/2.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/3.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/4.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/5.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <!-- <iframe width="1120" height="630" src="https://www.youtube.com/embed/WuB6I7e_Pws?si=eC2Lkd1STq9k8hDi"
+              title="YouTube video player" frameborder="0" allow="" referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe> -->
+          </div>
+        </div>
+        <!-- p2 -->
+        <div class="carousel-item p2" data-p="p2">
+          <div class="my-carousel-item ">
+            <!-- <video style="height:100%" controls>
+              <source src="assets/fgfbrands/p2/blurv1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video> -->
+            <iframe width="1120" height="630" src="https://www.youtube.com/embed/vHq8B-UTI_g?si=Emo00ZhkUc5Epujz"
+              title="YouTube video player" frameborder="0" allow="" allowfullscreen></iframe>
+          </div>
+        </div>
+        <!-- p3 -->
+        <div class="carousel-item p3" data-p="p3">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p3/1.png" alt="...">
+          </div>
+        </div>
+        <!-- <div class="carousel-item p2">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p2/5.png" alt="...">
+          </div>
+        </div> -->
+      </div>
+      <button class="carousel-control-prev my-control" type="button" data-bs-target="#fgfbrands-carousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next my-control" type="button" data-bs-target="#fgfbrands-carousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--  -->
+    <div class="filters col-8">
+      <div class="filter active" data-p="p1" data-container="fgfbrands">CLS project</div>
+      <div class="filter" data-p="p2" data-container="fgfbrands">VQS WonderBrands</div>
+      <div class="filter" data-p="p3" data-container="fgfbrands">Cerebro Shift report</div>
+    </div>
+    <!--  -->
+    <div class="summary col-8">
+      <p class="p1">
+        The Cerebro Factory Super-Intelligence project monitors manufactured goods on the factory lines and performs
+        automated QA and captures product loss using machine vision models. With cameras installed throughout all the
+        different plants, it becomes
+        a challenge to feed the frames from the ip cameras to the models. The next challenge is to prepare media files
+        that allow live streaming. The Cerebro Live Streaming (CLS) project is the solution for prepping hls media files
+        for streaming camera feed to a webapp. Increasing visibility on the problematic camera is important. In this
+        project, I created a visualization component to show the status of hundreds of cameras
+      </p>
+      <p class="p2">
+        The Visual Quality System (VQS) Wonderbrands is an app that is used to display the acceptable versions of all
+        the
+        products made by wonderbrands. This app is placed on the QA lines where workers have a constant reference for
+        the
+        acceptable standard for the product. I used .NET 4.7 Framework MVC, EDMX files to connect to DB, bootstrap,
+        Graph
+        APIs, ajax calls, async image downloading.
+      </p>
+      <p class="p3">
+        The Cerebro Shift Report is a standalone webapp used by factory line managers to make data entries. They use it
+        to
+        keep track of batter losses per work shift and additional information regarding the shift.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FGF Brands 2 -->
+  <div id="fgfbrands2" class="row center-column entry-container">
+    <div class="container-header">
+      <h2 style="width:fit-content">.NET FullStack @ FGF Brands</h2>
+    </div>
+    <div id="fgfbrands2-carousel" class="carousel slide my-carousel">
+      <!-- <div class="carousel-indicators">
+        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div> -->
+      <div class="carousel-inner ">
+        <!-- p1 -->
+        <div class="carousel-item active p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/1.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/2.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/3.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/4.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p1/5.png" alt="...">
+          </div>
+        </div>
+        <div class="carousel-item p1" data-p="p1">
+          <div class="my-carousel-item ">
+            <!-- <iframe width="1120" height="630" src="https://www.youtube.com/embed/WuB6I7e_Pws?si=eC2Lkd1STq9k8hDi"
+              title="YouTube video player" frameborder="0" allow="" referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe> -->
+          </div>
+        </div>
+        <!-- p2 -->
+        <div class="carousel-item p2" data-p="p2">
+          <div class="my-carousel-item ">
+            <!-- <iframe width="1120" height="630" src="https://www.youtube.com/embed/vHq8B-UTI_g?si=Emo00ZhkUc5Epujz"
+              title="YouTube video player" frameborder="0" allow=" " referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe> -->
+          </div>
+        </div>
+        <!-- p3 -->
+        <div class="carousel-item p3" data-p="p3">
+          <div class="my-carousel-item ">
+            <img class="img-contain inh" src="assets/fgfbrands/p3/1.png" alt="...">
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev my-control" type="button" data-bs-target="#fgfbrands2-carousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next my-control" type="button" data-bs-target="#fgfbrands2-carousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--  -->
+    <div class="filters col-8">
+      <div class="filter active" data-p="p1" data-container="fgfbrands2">CLS project</div>
+      <div class="filter" data-p="p2" data-container="fgfbrands2">VQS WonderBrands</div>
+      <div class="filter" data-p="p3" data-container="fgfbrands2">Cerebro Shift report</div>
+    </div>
+    <!--  -->
+    <div class="summary col-8">
+      <p class="p1">
+        The Cerebro Factory Super-Intelligence project monitors manufactured goods on the factory lines and performs
+        automated QA and captures product loss using machine vision models. With cameras installed throughout all the
+        different plants, it becomes
+        a challenge to feed the frames from the ip cameras to the models. The next challenge is to prepare media files
+        that allow live streaming. The Cerebro Live Streaming (CLS) project is the solution for prepping hls media files
+        for streaming camera feed to a webapp. Increasing visibility on the problematic camera is important. In this
+        project, I created a visualization component to show the status of hundreds of cameras
+      </p>
+      <p class="p2">
+        The Visual Quality System (VQS) Wonderbrands is an app that is used to display the acceptable versions of all
+        the
+        products made by wonderbrands. This app is placed on the QA lines where workers have a constant reference for
+        the
+        acceptable standard for the product. I used .NET 4.7 Framework MVC, EDMX files to connect to DB, bootstrap,
+        Graph
+        APIs, ajax calls, async image downloading.
+      </p>
+      <p class="p3">
+        The Cerebro Shift Report is a standalone webapp used by factory line managers to make data entries. They use it
+        to
+        keep track of batter losses per work shift and additional information regarding the shift.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
 
 </body>
 
-<script src="/js/navbar.js"></script>
+<script>
+  // var inners = { "#fgfbrands": $("#fgfbrands").clone() };
+
+
+  $(".my-carousel-item").click((event) => {
+    // todo, make it zoom in
+    let $el = $(event.target)
+
+    console.log($el)
+  })
+
+  $(".filter").click((event) => {
+    // responsible for moving the carousel when filter button is clicked
+    let $el = $(event.currentTarget)
+    let p = $el.data("p");
+    let container_id = '#' + $el.data("container")
+    console.log(`project ${p} and container ${container_id}`)
+
+    $(container_id).find(".filter").removeClass("active")
+    $el.addClass("active");
+
+    // $(container_id).find(".carousel-item").removeClass("active");
+    // console.log(`.carousel-item.${p}`)
+    let index = $(container_id).find(`.carousel-item.${p}`).first().index();
+    $(container_id).find('.carousel').carousel(index);
+
+
+
+    // let $template = inners[carousel_id]
+    // let $filtered_children = $template.find(".carousel-inner").first().find("." + p).clone()
+    // $(container_id).find(".carousel-inner").first().empty()
+    // $(container_id).find(".carousel-inner").first().append($filtered_children)
+    // $(container_id).find(".carousel-item").removeClass("active");
+    // $(container_id).find(".carousel-item").first().addClass("active")
+
+
+
+
+  })
+
+  $(".my-control").click((event) => {
+    // Controls what happens when you click the navigation buttons on the carousel
+
+    // query to get carousal
+    // query to get which one is active
+    // query to hide all paragraphs
+    // query to show the one paragraph
+
+    let $el = $(event.currentTarget)
+    let $carousel = $el.closest(".carousel")
+    // short circuit if same project
+    let p_cur = $carousel.find(".carousel-item.active").data("p")
+    let project = $carousel.find(".carousel-item.carousel-item-next").data("p")
+    if (!project) { // its undefined
+      project = $carousel.find(".carousel-item.carousel-item-prev").data("p")
+    }
+    if (p_cur === project) {
+      return;
+    }
+    let carousel_id = $carousel.attr('id')
+    console.log(project + carousel_id)
+
+    $carousel.siblings(".summary").children().hide(500)
+    $carousel.siblings(".summary").children("." + project).show(500)
+
+    $carousel.siblings(".filters").children().removeClass("active")
+    $carousel.siblings(".filters").children(`[data-p="${project}"]`).addClass("active")
+  })
+</script>
 
 </html>
