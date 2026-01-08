@@ -1,3 +1,5 @@
 *.map
 untracked_folder/*
 *.log
+*.mp4
+*z_*
