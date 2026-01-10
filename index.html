@@ -269,118 +269,6 @@
 
 
 
-  <!-- FGF Brands 2 -->
-  <div id="fgfbrands2" class="row center-column entry-container">
-    <div class="container-header">
-      <h2 style="width:fit-content">.NET FullStack @ FGF Brands</h2>
-    </div>
-    <div id="fgfbrands2-carousel" class="carousel slide my-carousel">
-      <!-- <div class="carousel-indicators">
-        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div> -->
-      <div class="carousel-inner ">
-        <!-- p1 -->
-        <div class="carousel-item active p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/1.png" alt="...">
-          </div>
-        </div>
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/2.png" alt="...">
-          </div>
-        </div>
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/3.png" alt="...">
-          </div>
-        </div>
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/4.png" alt="...">
-          </div>
-        </div>
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/5.png" alt="...">
-          </div>
-        </div>
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <iframe class="iframe-carousel" src="https://www.youtube.com/embed/WuB6I7e_Pws?si=eC2Lkd1STq9k8hDi"
-              title="YouTube video player" frameborder="0" allow="" referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-        <!-- p2 -->
-        <div class="carousel-item p2" data-p="p2">
-          <div class="my-carousel-item ">
-            <iframe class="iframe-carousel" src="https://www.youtube.com/embed/vHq8B-UTI_g?si=Emo00ZhkUc5Epujz"
-              title="YouTube video player" frameborder="0" allow=" " referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-        <!-- p3 -->
-        <div class="carousel-item p3" data-p="p3">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p3/1.png" alt="...">
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev my-control" type="button" data-bs-target="#fgfbrands2-carousel"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next my-control" type="button" data-bs-target="#fgfbrands2-carousel"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!--  -->
-    <div class="filters col-8">
-      <div class="filter active" data-p="p1" data-container="fgfbrands2">CLS project</div>
-      <div class="filter" data-p="p2" data-container="fgfbrands2">VQS WonderBrands</div>
-      <div class="filter" data-p="p3" data-container="fgfbrands2">Cerebro Shift report</div>
-    </div>
-    <!--  -->
-    <div class="summary col-8">
-      <p class="p1">
-        The Cerebro Factory Super-Intelligence project monitors manufactured goods on the factory lines and performs
-        automated QA and captures product loss using machine vision models. With cameras installed throughout all the
-        different plants, it becomes
-        a challenge to feed the frames from the ip cameras to the models. The next challenge is to prepare media files
-        that allow live streaming. The Cerebro Live Streaming (CLS) project is the solution for prepping hls media files
-        for streaming camera feed to a webapp. Increasing visibility on the problematic camera is important. In this
-        project, I created a visualization component to show the status of hundreds of cameras
-      </p>
-      <p class="p2">
-        The Visual Quality System (VQS) Wonderbrands is an app that is used to display the acceptable versions of all
-        the
-        products made by wonderbrands. This app is placed on the QA lines where workers have a constant reference for
-        the
-        acceptable standard for the product. I used .NET 4.7 Framework MVC, EDMX files to connect to DB, bootstrap,
-        Graph
-        APIs, ajax calls, async image downloading.
-      </p>
-      <p class="p3">
-        The Cerebro Shift Report is a standalone webapp used by factory line managers to make data entries. They use it
-        to
-        keep track of batter losses per work shift and additional information regarding the shift.
-      </p>
-
-    </div>
-
-  </div>
-
-
-
-
-
 </body>
 
 <script>
@@ -417,28 +305,14 @@
     // $(container_id).find(".carousel-inner").first().append($filtered_children)
     // $(container_id).find(".carousel-item").removeClass("active");
     // $(container_id).find(".carousel-item").first().addClass("active")
-
-
-
-
   })
 
-  $(".my-control").click((event) => {
-    // Controls what happens when you click the navigation buttons on the carousel
+  $('.carousel').on('slid.bs.carousel', function (event) {
+    let $carousel = $(event.target).closest(".carousel")
+    console.log('Carousel moved to slide:', $(event.relatedTarget).data("p"));
+    let p_cur = $(event.target).find('.carousel-item').eq(event.from).data("p")
+    let project = $(event.relatedTarget).data("p");
 
-    // query to get carousal
-    // query to get which one is active
-    // query to hide all paragraphs
-    // query to show the one paragraph
-
-    let $el = $(event.currentTarget)
-    let $carousel = $el.closest(".carousel")
-    // short circuit if same project
-    let p_cur = $carousel.find(".carousel-item.active").data("p")
-    let project = $carousel.find(".carousel-item.carousel-item-next").data("p")
-    if (!project) { // its undefined
-      project = $carousel.find(".carousel-item.carousel-item-prev").data("p")
-    }
     if (p_cur === project) {
       return;
     }
@@ -450,7 +324,14 @@
 
     $carousel.siblings(".filters").children().removeClass("active")
     $carousel.siblings(".filters").children(`[data-p="${project}"]`).addClass("active")
-  })
+
+
+
+
+  });
+
+
+
 </script>
 
 </html>
