@@ -89,10 +89,11 @@
   }
 
   .my-control {
-    background-color: grey;
 
-    /* height: 30px;
-    border-radius: 1; */
+    background-color: grey;
+    color: black;
+    height: 100px;
+    width: 50px;
   }
 
   .filters {
@@ -245,14 +246,12 @@
           </div>
         </div> -->
       </div>
-      <button class="carousel-control-prev my-control" type="button" data-bs-target="#fgfbrands-carousel"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <button class="carousel-control-prev " type="button" data-bs-target="#fgfbrands-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon my-control" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next my-control" type="button" data-bs-target="#fgfbrands-carousel"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <button class="carousel-control-next" type="button" data-bs-target="#fgfbrands-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon my-control" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
@@ -265,13 +264,13 @@
     <!--  -->
     <div class="summaries col-8">
       <div class="summary p1">
-        The <b>Cerebro Factory Super-Intelligence</b> project monitors manufactured goods on the factory lines and
+        The <u>Cerebro Factory Super-Intelligence</u> project monitors manufactured goods on the factory lines and
         performs
         automated QA and captures product loss using machine vision models. With hundreds of cameras installed
         throughout all the different plants, it becomes a challenge to debug issues and understand points-of-failures.
         Originally, all camera statuses where displayed as a Kendo Grid.
-
-
+        <br>
+        <br>
         In this project, I designed two webpages built in .NET MVC, one for a visualization tool and one to get ffmpeg
         logs from python microservice.
         The visualization tool allows management to easily identify problems and notify developers. The component's
@@ -290,24 +289,44 @@
 
       </div>
       <div class="summary p2">
-        The Visual Quality System (VQS) Wonderbrands is an app that is used to display the acceptable versions of all
-        the
-        products made by wonderbrands. This app is placed on the QA lines where workers have a constant reference for
-        the
-        acceptable standard for the product. I used .NET 4.7 Framework MVC, EDMX files to connect to DB, bootstrap,
-        Graph
-        APIs, ajax calls, async image downloading.
+        The <u>Visual Quality System (VQS) Wonderbrands</u> is an app that pulls images from sharepoint and displays
+        the acceptable versions of all the products made by wonderbrands. This app replaces the existing Power App
+        (that's why it looks the way it does) and is placed on the plant lines where
+        workers have a constant reference for the acceptable standard for each product.
+        <br>
+        <br>
+
+
+        The biggest challenge
+        I faced in this project was getting the images from the Sharepoint Site. I used Azure AD and Graph APIs to
+        obtain authentication tokens. Graph APIs where used again with the tokens to download images from a Sharepoint
+        Site that existed on a different Tenant. I also used Power Automate to create a Flow that will copy any new
+        images added to this Site and place in a Blob storage on our company's Tenant. This required some coordination
+        between me and the Infra. team and exposed me to different departments within the company.
+        <br>
+        <br>
+        Querying Sharepoint for the images using the Graph APIs takes a really long time. Thus I optimizes my solution
+        by asynchronously downloading images from the front end. My controller would send a "skeleton" webpage
+        that contained image tags without sources. These sources were later added using AJAX calls and Base64 images.
 
         <div class="skills">
-          C#;dot NET MVC;SQL;Python;asyncio.py;subprocess.py
+          C#;dot NET MVC;Entity Framework;EDMX;SQL;<a href="https://www.google.com/" target="_blank">Graph APIs</a>;
+          Javascript;JQuery;Bootstrap;HTML;CSS;Telerik Kendo UI
         </div>
       </div>
       <div class="summary p3">
-        The Cerebro Shift Report is a standalone webapp used by factory line managers to make data entries. They use it
-        to
-        keep track of batter losses per work shift and additional information regarding the shift.
+        The <u>Cerebro Shift Report</u> is a standalone webapp used by factory line managers to make data entries. They
+        use it
+        to keep track of batter losses per work shift and additional information regarding the shift. I used a Kendo
+        Grid with inline
+        editing. This simple app uses Microsoft's Entra ID and integrated with company Authorization Management
+        Portal(AMP).
+        <br>
+        <br>
+        One particular challenge I overcame was replacing the default inline textbox for Batter Loss Reason to be text
+        area. I learnt how to bind input fields to attributes of the data Model in Kendo UI.
         <div class="skills">
-          Telerik Kendo UI;ffmpeg
+          C#;dot NET MVC;Entity Framework;EDMX;SQL;Javascript;Bootstrap;HTML;CSS;Telerik Kendo UI
         </div>
       </div>
 
@@ -381,7 +400,7 @@
   $(document).ready(function () {
     console.log("creating the skills elements")
     $(".skills").each(function () {
-      let skills = $(this).text().split(";").map((x) => x.trim())
+      let skills = $(this).html().split(";").map((x) => x.trim())
       $(this).empty();
       console.log(skills)
       skills.forEach((skill) => {
