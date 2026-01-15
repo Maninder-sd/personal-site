@@ -6,11 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>My Projects</title>
 </head>
 
@@ -29,6 +35,15 @@
     font-size: small;
   }
 
+  a {
+    color: #5ad5c2;
+    /* padding: 2px;
+    box-shadow: 0 0 10px #7a1c27;
+    background-color: #7a1c2755;
+    border-radius: 10px; */
+  }
+
+
   .title {
     display: flex;
     flex-direction: column;
@@ -43,6 +58,7 @@
   .entry-container {
     min-height: 100vh;
     margin-top: 20px;
+    width: 100%;
   }
 
   .container-header {
@@ -52,6 +68,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .container-header h2 {
@@ -132,6 +149,10 @@
     display: block;
   }
 
+  .summaries.display-all .summary {
+    display: block;
+  }
+
   .summaries {
     background-color: #571216;
     color: white;
@@ -167,6 +188,16 @@
     /* slightly darker gold */
     transform: translateY(-2px);
   }
+
+  .quote .content {
+    font-style: italic;
+    text-align: center;
+    font-size: large;
+  }
+
+  .quote .source {
+    text-align: right
+  }
 </style>
 
 <body>
@@ -186,6 +217,7 @@
     </div>
 
 
+    <!-- Carousel -->
     <div id="fgfbrands-carousel" class="carousel slide my-carousel">
       <!-- <div class="carousel-indicators">
         <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="0" class="active"
@@ -255,13 +287,13 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <!--  -->
+    <!-- Filters  -->
     <div class="filters col-8">
       <div class="filter active" data-p="p1" data-container="fgfbrands">CLS project</div>
       <div class="filter" data-p="p2" data-container="fgfbrands">VQS WonderBrands</div>
       <div class="filter" data-p="p3" data-container="fgfbrands">Cerebro Shift report</div>
     </div>
-    <!--  -->
+    <!-- Summaries -->
     <div class="summaries col-8">
       <div class="summary p1">
         The <u>Cerebro Factory Super-Intelligence</u> project monitors manufactured goods on the factory lines and
@@ -310,7 +342,8 @@
         that contained image tags without sources. These sources were later added using AJAX calls and Base64 images.
 
         <div class="skills">
-          C#;dot NET MVC;Entity Framework;EDMX;SQL;<a href="https://www.google.com/" target="_blank">Graph APIs</a>;
+          C#;dot NET MVC;Entity Framework;EDMX;SQL;<a href="https://github.com/Maninder-sd/GraphApiWrapper"
+            target="_blank">Graph APIs</a>;
           Javascript;JQuery;Bootstrap;HTML;CSS;Telerik Kendo UI
         </div>
       </div>
@@ -329,6 +362,120 @@
           C#;dot NET MVC;Entity Framework;EDMX;SQL;Javascript;Bootstrap;HTML;CSS;Telerik Kendo UI
         </div>
       </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Open Source Contributions -->
+  <div id="open-source" class="row center-column entry-container">
+    <!-- header -->
+    <div class="container-header">
+      <h2 style="width:fit-content">My Open Source Contributions</h2>
+    </div>
+    <!-- Summaries -->
+    <div class="summaries col-8 display-all">
+
+      <!-- Network X -->
+      <div class="summary p1">
+        <h4><a href="https://networkx.org/en/">NetworkX</a></h4>
+
+        <div class="quote">
+          <div class="content">
+            "NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and
+            functions of complex networks"
+          </div>
+          <div class="source">
+            - NetworkX official website
+          </div>
+
+        </div>
+
+
+        <br>
+        <br>
+
+        <ul>
+
+          <li>
+            <div class="name">Adding optional sp arg to closeness_centrality </div>
+            <div class="issue-link">My proposal</div>
+            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8424">PR #8424</a>
+            </div>
+            <div class="date">Dec 2025</div>
+          </li>
+          <!--  -->
+          <li>
+            <div class="name">pos kwarg not recognized by display </div>
+            <div class="issue-link"><a target="_blank" href="https://github.com/networkx/networkx/issues/8143">Issue
+                #8143</a></div>
+            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8153">PR #8153</a>
+            </div>
+            <div class="date">July 2025</div>
+          </li>
+          <!--  -->
+          <li>
+            <div class="name">support target parameter for generate_random_paths </div>
+            <div class="issue-link"><a target="_blank" href="https://github.com/networkx/networkx/issues/8014">Issue
+                #8014</a></div>
+            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8141">PR #8141</a>
+            </div>
+            <div class="date">July 2025</div>
+          </li>
+          <!--  -->
+          <li>
+            <div class="name">Unexpected behavior for subgraph monomorphisms with MultiGraph </div>
+            <div class="issue-link"><a target="_blank" href="https://github.com/networkx/networkx/issues/7758">Issue
+                #7758</a></div>
+            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8134">PR #8134</a>
+            </div>
+            <div class="date">July 2025</div>
+          </li>
+        </ul>
+
+
+        <div class="skills">
+          Python;numpy.py;matplotlib.py;Pytest;Unit testing;<a href="" target="_blank">Sphinx documentation</a>
+        </div>
+
+
+      </div>
+
+      <br>
+      <hr>
+      <br>
+      <!-- Microsoft Graph API Wrapper -->
+      <div class="summary p2">
+        <h4><a target="_blank" href="https://github.com/Maninder-sd/GraphApiWrapper">Microsoft Graph API Wrapper</a>
+        </h4>
+
+        <div class="quote">
+          <div class="content">
+            "The purpose of this project is to make a user friendly wrapper in C# for the Microsoft Graph APIs. The
+            wrappers are designed with the option to cache data (item ids, urls etc) to improve performance by
+            preventing unnecessary api calls."
+          </div>
+          <div class="source">
+            - Github README
+          </div>
+
+        </div>
+
+
+        <br>
+        <br>
+
+
+        <div class="skills">
+          C#;.NET 8;xUnit framework;Factory Pattern;XML documentation comments;DocFX;Graph API;Sharepoint;OneDrive;MS
+          Teams
+        </div>
+
+
+
+      </div>
+
 
     </div>
 
@@ -399,6 +546,9 @@
 
   $(document).ready(function () {
     console.log("creating the skills elements")
+    // preparing the links
+    $("a").append(`<i class="custom-link fa-solid fa-arrow-up-right-from-square"></i>`)
+    // setting up the skills labels
     $(".skills").each(function () {
       let skills = $(this).html().split(";").map((x) => x.trim())
       $(this).empty();
@@ -413,6 +563,10 @@
 
     })
   })
+
+
+
+
 
 
 </script>
