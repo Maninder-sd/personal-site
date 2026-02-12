@@ -2,567 +2,688 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <title>My Projects</title>
+    <title>My Projects</title>
 </head>
 
 <style>
-  body {
-    font-family: 'arial';
-    margin: 0;
-    padding: 0;
-    background-image: url("./assets/Linen_background.png");
-    background-attachment: fixed;
+    body {
+        font-family: 'arial';
+        margin: 0;
+        padding: 0;
+        background-image: url("./assets/Linen_background.png");
+        background-attachment: fixed;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 200vh;
-    font-size: small;
-  }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 200vh;
+        font-size: small;
+    }
 
-  a {
-    color: #5ad5c2;
-    /* padding: 2px;
+    a {
+        color: #5ad5c2;
+        /* padding: 2px;
     box-shadow: 0 0 10px #7a1c27;
     background-color: #7a1c2755;
     border-radius: 10px; */
-  }
+    }
 
 
-  .title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    background-color: #7a1c27bf;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 5px 5px #000000;
-  }
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        background-color: #7a1c27bf;
+        padding: 20px;
+        margin-top: 20px;
+        box-shadow: 5px 5px #000000;
+    }
 
-  .entry-container {
-    min-height: 100vh;
-    margin-top: 20px;
-    width: 100%;
-  }
+    .entry-container {
+        min-height: 100vh;
+        margin-top: 20px;
+        width: 100%;
+    }
 
-  .container-header {
-    background-color: #571216;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
+    .container-header {
+        background-color: #571216;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
-  .container-header h2 {
-    color: white;
-    padding: 0;
-    margin: 0;
-    font-size: medium !important;
-  }
+    .container-header h2 {
+        color: white;
+        padding: 0;
+        margin: 0;
+        font-size: medium !important;
+    }
 
-  .my-carousel-item {
-    height: 60vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    cursor: pointer;
-    /* background-color: aqua; */
-  }
+    .my-carousel-item {
+        height: 60vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        cursor: pointer;
+        /* background-color: aqua; */
+    }
 
-  .inh {
-    height: 100%;
-  }
+    .inh {
+        height: 100%;
+    }
 
-  .iframe-carousel {
-    height: 100%;
-    width: 800px;
-  }
+    .iframe-carousel {
+        height: 100%;
+        width: 800px;
+    }
 
-  .center-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: space-around; */
-  }
+    .center-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: space-around; */
+    }
 
-  .my-control {
+    .my-control {
 
-    background-color: grey;
-    color: black;
-    height: 100px;
-    width: 50px;
-  }
+        background-color: grey;
+        color: black;
+        height: 100px;
+        width: 50px;
+    }
 
-  .filters {
-    display: flex;
-    flex-direction: row;
-    column-gap: 20px;
-    align-items: center;
-    justify-content: left;
-    margin: 10px 0;
-  }
+    .filters {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        align-items: center;
+        justify-content: left;
+        margin: 10px 0;
+    }
 
-  .filter {
-    background-color: #ba4073;
-    color: white;
-    font-weight: 400;
-    padding: 5px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.15s;
-  }
+    .filter {
+        background-color: #ba4073;
+        color: white;
+        font-weight: 400;
+        padding: 5px 15px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.15s;
+    }
 
-  .filter:hover {
-    background-color: #571216;
-    box-shadow: 2px 2px 10px #000000;
-  }
+    .filter:hover {
+        background-color: #571216;
+        box-shadow: 2px 2px 10px #000000;
+    }
 
-  .filter.active {
-    background-color: #571216;
-  }
+    .filter.active {
+        background-color: #571216;
+    }
 
-  .summaries .summary {
-    display: none;
-  }
+    .summaries .summary {
+        display: none;
+    }
 
-  .summaries .summary:first-child {
-    display: block;
-  }
+    .summaries .summary:first-child {
+        display: block;
+    }
 
-  .summaries.display-all .summary {
-    display: block;
-  }
+    .summaries.display-all .summary {
+        display: block;
+    }
 
-  .summaries {
-    background-color: #571216;
-    color: white;
-    /* font-weight: 500; */
-    padding: 30px;
-    border-radius: 10px;
-    border: solid 8px #921f45;
-    height: fit-content;
-    transition: height 0.15s;
-  }
+    .summaries {
+        background-color: #571216;
+        color: white;
+        /* font-weight: 500; */
+        padding: 30px;
+        border-radius: 10px;
+        border: solid 8px #921f45;
+        height: fit-content;
+        transition: height 0.15s;
+    }
 
-  .skills {
-    width: 100%;
-    max-width: 600px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* column-gap: 50px; */
-  }
+    .skills {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* column-gap: 50px; */
+    }
 
-  .skill {
-    background-color: #C49A3A;
-    color: #571216;
-    padding: 3px 10px;
-    margin: 5px 10px 5px 0px;
-    border-radius: 20px;
-    cursor: default;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-  }
+    .skill {
+        background-color: #C49A3A;
+        color: #571216;
+        padding: 3px 10px;
+        margin: 5px 10px 5px 0px;
+        border-radius: 20px;
+        cursor: default;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
 
-  .skill:hover {
-    background-color: #b08933;
-    /* slightly darker gold */
-    transform: translateY(-2px);
-  }
+    .skill:hover {
+        background-color: #b08933;
+        /* slightly darker gold */
+        transform: translateY(-2px);
+    }
 
-  .quote .content {
-    font-style: italic;
-    text-align: center;
-    font-size: large;
-  }
+    .quote .content {
+        font-style: italic;
+        text-align: center;
+        font-size: large;
+    }
 
-  .quote .source {
-    text-align: right
-  }
+    .quote .source {
+        text-align: right
+    }
 </style>
 
 <body>
-  <div class="title">
-    <h2 style="font-weight:700">Welcome to my private site.</h2>
-    <p style="font-weight:bold">Here are some of the projects I've worked on. They include both work projects and
-      personal
-      projects.</p>
-  </div>
+    <div class="title">
+        <h2 style="font-weight:700">Welcome to my private site.</h2>
+        <p style="font-weight:bold">Here are some of the projects I've worked on. They include both work projects and
+            personal
+            projects.</p>
+    </div>
+
+    <!-- Component library -->
+    <div id="mani-ui" class="row center-column entry-container">
+        <div class="container-header">
+            <h2 style="width:fit-content">My experimental ui library : Mani-UI</h2>
+        </div>
+
+
+        <!-- Carousel -->
+        <div id="mani-ui-carousel" class="carousel slide my-carousel">
+            <div class="carousel-inner ">
+                <!-- p1 -->
+                <div class="carousel-item active p1" data-p="p1">
+                    <div class="my-carousel-item ">
+                        <img class="img-contain inh" src="assets/fgfbrands/p1/1.png" alt="...">
+                    </div>
+                </div>
 
 
 
-  <!-- FGF Brands -->
-  <div id="fgfbrands" class="row center-column entry-container">
-    <div class="container-header">
-      <h2 style="width:fit-content">.NET FullStack @ FGF Brands</h2>
+                <!-- p2 -->
+                <div class="carousel-item p2" data-p="p2">
+                    <div class="my-carousel-item ">
+                        <iframe class="iframe-carousel"
+                            src="https://www.youtube.com/embed/vHq8B-UTI_g?si=Emo00ZhkUc5Epujz"
+                            title="YouTube video player" frameborder="0" allow="" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- p3 -->
+
+            </div>
+            <button class="carousel-control-prev " type="button" data-bs-target="#mani-ui-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon my-control" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mani-ui-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon my-control" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Filters  -->
+        <div class="filters col-8">
+            <div class="filter active" data-p="p1" data-container="mani-ui">Canvas component</div>
+            <div class="filter" data-p="p2" data-container="mani-ui">tbd</div>
+        </div>
+        <!-- Summaries -->
+        <div class="summaries col-8">
+            <div class="summary p1">
+
+                This custom canvas lets you draw rectangles and render custom cards in the rectangles.
+                <br>
+                <br>
+                <div class="d-flex flex-row align-items-center justify-content-around" style="width:100%">
+                    <a id="" type="button" class="btn btn-secondary"
+                        href="https://maninder-sd.github.io/mani-ui/canvas/example.html">Check out my
+                        custom canvas
+                        component</a>
+                </div>
+
+                <br>
+                <br>
+
+
+                <div class="skills">
+                    JS;JQuery;HTML;CSS;UI State management
+                </div>
+
+
+            </div>
+            <div class="summary p2">
+                In progress ...
+
+                <div class="skills">
+                    Many Skills!
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 
-    <!-- Carousel -->
-    <div id="fgfbrands-carousel" class="carousel slide my-carousel">
-      <!-- <div class="carousel-indicators">
+
+
+
+
+
+
+
+    <!-- FGF Brands -->
+    <div id="fgfbrands" class="row center-column entry-container">
+        <div class="container-header">
+            <h2 style="width:fit-content">.NET FullStack @ FGF Brands</h2>
+        </div>
+
+
+        <!-- Carousel -->
+        <div id="fgfbrands-carousel" class="carousel slide my-carousel">
+            <!-- <div class="carousel-indicators">
         <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="0" class="active"
           aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div> -->
-      <div class="carousel-inner ">
-        <!-- p1 -->
-        <div class="carousel-item active p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/1.png" alt="...">
-          </div>
-        </div>
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/2.png" alt="...">
-          </div>
-        </div>
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/3.png" alt="...">
-          </div>
-        </div>
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p1/4.png" alt="...">
-          </div>
-        </div>
-        <!-- <div class="carousel-item p1" data-p="p1">
+            <div class="carousel-inner ">
+                <!-- p1 -->
+                <div class="carousel-item active p1" data-p="p1">
+                    <div class="my-carousel-item ">
+                        <img class="img-contain inh" src="assets/fgfbrands/p1/1.png" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item p1" data-p="p1">
+                    <div class="my-carousel-item ">
+                        <img class="img-contain inh" src="assets/fgfbrands/p1/2.png" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item p1" data-p="p1">
+                    <div class="my-carousel-item ">
+                        <img class="img-contain inh" src="assets/fgfbrands/p1/3.png" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item p1" data-p="p1">
+                    <div class="my-carousel-item ">
+                        <img class="img-contain inh" src="assets/fgfbrands/p1/4.png" alt="...">
+                    </div>
+                </div>
+                <!-- <div class="carousel-item p1" data-p="p1">
           <div class="my-carousel-item ">
             <img class="img-contain inh" src="assets/fgfbrands/p1/5.png" alt="...">
           </div>
         </div> -->
-        <div class="carousel-item p1" data-p="p1">
-          <div class="my-carousel-item ">
-            <iframe class="iframe-carousel" src="https://www.youtube.com/embed/WuB6I7e_Pws?si=eC2Lkd1STq9k8hDi"
-              title="YouTube video player" frameborder="0" allow="" referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-        <!-- p2 -->
-        <div class="carousel-item p2" data-p="p2">
-          <div class="my-carousel-item ">
-            <iframe class="iframe-carousel" src="https://www.youtube.com/embed/vHq8B-UTI_g?si=Emo00ZhkUc5Epujz"
-              title="YouTube video player" frameborder="0" allow="" allowfullscreen></iframe>
-          </div>
-        </div>
-        <!-- p3 -->
-        <div class="carousel-item p3" data-p="p3">
-          <div class="my-carousel-item ">
-            <img class="img-contain inh" src="assets/fgfbrands/p3/1.png" alt="...">
-          </div>
-        </div>
-        <!-- <div class="carousel-item p2">
+                <div class="carousel-item p1" data-p="p1">
+                    <div class="my-carousel-item ">
+                        <iframe class="iframe-carousel"
+                            src="https://www.youtube.com/embed/WuB6I7e_Pws?si=eC2Lkd1STq9k8hDi"
+                            title="YouTube video player" frameborder="0" allow=""
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- p2 -->
+                <div class="carousel-item p2" data-p="p2">
+                    <div class="my-carousel-item ">
+                        <iframe class="iframe-carousel"
+                            src="https://www.youtube.com/embed/vHq8B-UTI_g?si=Emo00ZhkUc5Epujz"
+                            title="YouTube video player" frameborder="0" allow="" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- p3 -->
+                <div class="carousel-item p3" data-p="p3">
+                    <div class="my-carousel-item ">
+                        <img class="img-contain inh" src="assets/fgfbrands/p3/1.png" alt="...">
+                    </div>
+                </div>
+                <!-- <div class="carousel-item p2">
           <div class="my-carousel-item ">
             <img class="img-contain inh" src="assets/fgfbrands/p2/5.png" alt="...">
           </div>
         </div> -->
-      </div>
-      <button class="carousel-control-prev " type="button" data-bs-target="#fgfbrands-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon my-control" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#fgfbrands-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon my-control" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- Filters  -->
-    <div class="filters col-8">
-      <div class="filter active" data-p="p1" data-container="fgfbrands">CLS project</div>
-      <div class="filter" data-p="p2" data-container="fgfbrands">VQS WonderBrands</div>
-      <div class="filter" data-p="p3" data-container="fgfbrands">Cerebro Shift report</div>
-    </div>
-    <!-- Summaries -->
-    <div class="summaries col-8">
-      <div class="summary p1">
-        The <u>Cerebro Factory Super-Intelligence</u> project monitors manufactured goods on the factory lines and
-        performs
-        automated QA and captures product loss using machine vision models. With hundreds of cameras installed
-        throughout all the different plants, it becomes a challenge to debug issues and understand points-of-failures.
-        Originally, all camera statuses where displayed as a Kendo Grid.
-        <br>
-        <br>
-        In this project, I designed two webpages built in .NET MVC, one for a visualization tool and one to get ffmpeg
-        logs from python microservice.
-        The visualization tool allows management to easily identify problems and notify developers. The component's
-        front end is written in Razor and vanilla Javascript and is easily customizable to add additional filters
-        and orderings. A python microservice is responsible for gathering and prepping frames into HLS
-        streamable files(.msu8, .ts). For this project, the service was extended to include REST APIs that returned
-        camera feed status and accurate plant locations using Master SQL tables.
-
-
-        <div class="skills">
-          C#;dot NET MVC;SQL;
-          Python;asyncio.py;subprocess.py;threading.py;
-          flask;JS;JQuery;HTML;CSS;Telerik Kendo UI;ffmpeg
-        </div>
-
-
-      </div>
-      <div class="summary p2">
-        The <u>Visual Quality System (VQS) Wonderbrands</u> is an app that pulls images from sharepoint and displays
-        the acceptable versions of all the products made by wonderbrands. This app replaces the existing Power App
-        (that's why it looks the way it does) and is placed on the plant lines where
-        workers have a constant reference for the acceptable standard for each product.
-        <br>
-        <br>
-
-
-        The biggest challenge
-        I faced in this project was getting the images from the Sharepoint Site. I used Azure AD and Graph APIs to
-        obtain authentication tokens. Graph APIs where used again with the tokens to download images from a Sharepoint
-        Site that existed on a different Tenant. I also used Power Automate to create a Flow that will copy any new
-        images added to this Site and place in a Blob storage on our company's Tenant. This required some coordination
-        between me and the Infra. team and exposed me to different departments within the company.
-        <br>
-        <br>
-        Querying Sharepoint for the images using the Graph APIs takes a really long time. Thus I optimizes my solution
-        by asynchronously downloading images from the front end. My controller would send a "skeleton" webpage
-        that contained image tags without sources. These sources were later added using AJAX calls and Base64 images.
-
-        <div class="skills">
-          C#;dot NET MVC;Entity Framework;EDMX;SQL;<a href="https://github.com/Maninder-sd/GraphApiWrapper"
-            target="_blank">Graph APIs</a>;
-          Javascript;JQuery;Bootstrap;HTML;CSS;Telerik Kendo UI
-        </div>
-      </div>
-      <div class="summary p3">
-        The <u>Cerebro Shift Report</u> is a standalone webapp used by factory line managers to make data entries. They
-        use it
-        to keep track of batter losses per work shift and additional information regarding the shift. I used a Kendo
-        Grid with inline
-        editing. This simple app uses Microsoft's Entra ID and integrated with company Authorization Management
-        Portal(AMP).
-        <br>
-        <br>
-        One particular challenge I overcame was replacing the default inline textbox for Batter Loss Reason to be text
-        area. I learnt how to bind input fields to attributes of the data Model in Kendo UI.
-        <div class="skills">
-          C#;dot NET MVC;Entity Framework;EDMX;SQL;Javascript;Bootstrap;HTML;CSS;Telerik Kendo UI
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <!-- Open Source Contributions -->
-  <div id="open-source" class="row center-column entry-container">
-    <!-- header -->
-    <div class="container-header">
-      <h2 style="width:fit-content">My Open Source Contributions</h2>
-    </div>
-    <!-- Summaries -->
-    <div class="summaries col-8 display-all">
-
-      <!-- Network X -->
-      <div class="summary p1">
-        <h4><a href="https://networkx.org/en/">NetworkX</a></h4>
-
-        <div class="quote">
-          <div class="content">
-            "NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and
-            functions of complex networks"
-          </div>
-          <div class="source">
-            - NetworkX official website
-          </div>
-
-        </div>
-
-
-        <br>
-        <br>
-
-        <ul>
-
-          <li>
-            <div class="name">Adding optional sp arg to closeness_centrality </div>
-            <div class="issue-link">My proposal</div>
-            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8424">PR #8424</a>
             </div>
-            <div class="date">Dec 2025</div>
-          </li>
-          <!--  -->
-          <li>
-            <div class="name">pos kwarg not recognized by display </div>
-            <div class="issue-link"><a target="_blank" href="https://github.com/networkx/networkx/issues/8143">Issue
-                #8143</a></div>
-            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8153">PR #8153</a>
-            </div>
-            <div class="date">July 2025</div>
-          </li>
-          <!--  -->
-          <li>
-            <div class="name">support target parameter for generate_random_paths </div>
-            <div class="issue-link"><a target="_blank" href="https://github.com/networkx/networkx/issues/8014">Issue
-                #8014</a></div>
-            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8141">PR #8141</a>
-            </div>
-            <div class="date">July 2025</div>
-          </li>
-          <!--  -->
-          <li>
-            <div class="name">Unexpected behavior for subgraph monomorphisms with MultiGraph </div>
-            <div class="issue-link"><a target="_blank" href="https://github.com/networkx/networkx/issues/7758">Issue
-                #7758</a></div>
-            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8134">PR #8134</a>
-            </div>
-            <div class="date">July 2025</div>
-          </li>
-        </ul>
-
-
-        <div class="skills">
-          Python;numpy.py;matplotlib.py;Pytest;Unit testing;<a href="" target="_blank">Sphinx documentation</a>
+            <button class="carousel-control-prev " type="button" data-bs-target="#fgfbrands-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon my-control" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#fgfbrands-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon my-control" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
+        <!-- Filters  -->
+        <div class="filters col-8">
+            <div class="filter active" data-p="p1" data-container="fgfbrands">CLS project</div>
+            <div class="filter" data-p="p2" data-container="fgfbrands">VQS WonderBrands</div>
+            <div class="filter" data-p="p3" data-container="fgfbrands">Cerebro Shift report</div>
+        </div>
+        <!-- Summaries -->
+        <div class="summaries col-8">
+            <div class="summary p1">
+                The <u>Cerebro Factory Super-Intelligence</u> project monitors manufactured goods on the factory lines
+                and
+                performs
+                automated QA and captures product loss using machine vision models. With hundreds of cameras installed
+                throughout all the different plants, it becomes a challenge to debug issues and understand
+                points-of-failures.
+                Originally, all camera statuses where displayed as a Kendo Grid.
+                <br>
+                <br>
+                In this project, I designed two webpages built in .NET MVC, one for a visualization tool and one to get
+                ffmpeg
+                logs from python microservice.
+                The visualization tool allows management to easily identify problems and notify developers. The
+                component's
+                front end is written in Razor and vanilla Javascript and is easily customizable to add additional
+                filters
+                and orderings. A python microservice is responsible for gathering and prepping frames into HLS
+                streamable files(.msu8, .ts). For this project, the service was extended to include REST APIs that
+                returned
+                camera feed status and accurate plant locations using Master SQL tables.
 
 
-      </div>
+                <div class="skills">
+                    C#;dot NET MVC;SQL;
+                    Python;asyncio.py;subprocess.py;threading.py;
+                    flask;JS;JQuery;HTML;CSS;Telerik Kendo UI;ffmpeg
+                </div>
 
-      <br>
-      <hr>
-      <br>
-      <!-- Microsoft Graph API Wrapper -->
-      <div class="summary p2">
-        <h4><a target="_blank" href="https://github.com/Maninder-sd/GraphApiWrapper">Microsoft Graph API Wrapper</a>
-        </h4>
 
-        <div class="quote">
-          <div class="content">
-            "The purpose of this project is to make a user friendly wrapper in C# for the Microsoft Graph APIs. The
-            wrappers are designed with the option to cache data (item ids, urls etc) to improve performance by
-            preventing unnecessary api calls."
-          </div>
-          <div class="source">
-            - Github README
-          </div>
+            </div>
+            <div class="summary p2">
+                The <u>Visual Quality System (VQS) Wonderbrands</u> is an app that pulls images from sharepoint and
+                displays
+                the acceptable versions of all the products made by wonderbrands. This app replaces the existing Power
+                App
+                (that's why it looks the way it does) and is placed on the plant lines where
+                workers have a constant reference for the acceptable standard for each product.
+                <br>
+                <br>
+
+
+                The biggest challenge
+                I faced in this project was getting the images from the Sharepoint Site. I used Azure AD and Graph APIs
+                to
+                obtain authentication tokens. Graph APIs where used again with the tokens to download images from a
+                Sharepoint
+                Site that existed on a different Tenant. I also used Power Automate to create a Flow that will copy any
+                new
+                images added to this Site and place in a Blob storage on our company's Tenant. This required some
+                coordination
+                between me and the Infra. team and exposed me to different departments within the company.
+                <br>
+                <br>
+                Querying Sharepoint for the images using the Graph APIs takes a really long time. Thus I optimizes my
+                solution
+                by asynchronously downloading images from the front end. My controller would send a "skeleton" webpage
+                that contained image tags without sources. These sources were later added using AJAX calls and Base64
+                images.
+
+                <div class="skills">
+                    C#;dot NET MVC;Entity Framework;EDMX;SQL;<a href="https://github.com/Maninder-sd/GraphApiWrapper"
+                        target="_blank">Graph APIs</a>;
+                    Javascript;JQuery;Bootstrap;HTML;CSS;Telerik Kendo UI
+                </div>
+            </div>
+            <div class="summary p3">
+                The <u>Cerebro Shift Report</u> is a standalone webapp used by factory line managers to make data
+                entries. They
+                use it
+                to keep track of batter losses per work shift and additional information regarding the shift. I used a
+                Kendo
+                Grid with inline
+                editing. This simple app uses Microsoft's Entra ID and integrated with company Authorization Management
+                Portal(AMP).
+                <br>
+                <br>
+                One particular challenge I overcame was replacing the default inline textbox for Batter Loss Reason to
+                be text
+                area. I learnt how to bind input fields to attributes of the data Model in Kendo UI.
+                <div class="skills">
+                    C#;dot NET MVC;Entity Framework;EDMX;SQL;Javascript;Bootstrap;HTML;CSS;Telerik Kendo UI
+                </div>
+            </div>
 
         </div>
-
-
-        <br>
-        <br>
-
-
-        <div class="skills">
-          C#;.NET 8;xUnit framework;Factory Pattern;XML documentation comments;DocFX;Graph API;Sharepoint;OneDrive;MS
-          Teams
-        </div>
-
-
-
-      </div>
-
 
     </div>
 
-  </div>
+
+    <!-- Open Source Contributions -->
+    <div id="open-source" class="row center-column entry-container">
+        <!-- header -->
+        <div class="container-header">
+            <h2 style="width:fit-content">My Open Source Contributions</h2>
+        </div>
+        <!-- Summaries -->
+        <div class="summaries col-8 display-all">
+
+            <!-- Network X -->
+            <div class="summary p1">
+                <h4><a href="https://networkx.org/en/">NetworkX</a></h4>
+
+                <div class="quote">
+                    <div class="content">
+                        "NetworkX is a Python package for the creation, manipulation, and study of the structure,
+                        dynamics, and
+                        functions of complex networks"
+                    </div>
+                    <div class="source">
+                        - NetworkX official website
+                    </div>
+
+                </div>
+
+
+                <br>
+                <br>
+
+                <ul>
+
+                    <li>
+                        <div class="name">Adding optional sp arg to closeness_centrality </div>
+                        <div class="issue-link">My proposal</div>
+                        <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8424">PR
+                                #8424</a>
+                        </div>
+                        <div class="date">Dec 2025</div>
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="name">pos kwarg not recognized by display </div>
+                        <div class="issue-link"><a target="_blank"
+                                href="https://github.com/networkx/networkx/issues/8143">Issue
+                                #8143</a></div>
+                        <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8153">PR
+                                #8153</a>
+                        </div>
+                        <div class="date">July 2025</div>
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="name">support target parameter for generate_random_paths </div>
+                        <div class="issue-link"><a target="_blank"
+                                href="https://github.com/networkx/networkx/issues/8014">Issue
+                                #8014</a></div>
+                        <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8141">PR
+                                #8141</a>
+                        </div>
+                        <div class="date">July 2025</div>
+                    </li>
+                    <!--  -->
+                    <li>
+                        <div class="name">Unexpected behavior for subgraph monomorphisms with MultiGraph </div>
+                        <div class="issue-link"><a target="_blank"
+                                href="https://github.com/networkx/networkx/issues/7758">Issue
+                                #7758</a></div>
+                        <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8134">PR
+                                #8134</a>
+                        </div>
+                        <div class="date">July 2025</div>
+                    </li>
+                </ul>
+
+
+                <div class="skills">
+                    Python;numpy.py;matplotlib.py;Pytest;Unit testing;<a href="" target="_blank">Sphinx
+                        documentation</a>
+                </div>
+
+
+            </div>
+
+            <br>
+            <hr>
+            <br>
+            <!-- Microsoft Graph API Wrapper -->
+            <div class="summary p2">
+                <h4><a target="_blank" href="https://github.com/Maninder-sd/GraphApiWrapper">Microsoft Graph API
+                        Wrapper</a>
+                </h4>
+
+                <div class="quote">
+                    <div class="content">
+                        "The purpose of this project is to make a user friendly wrapper in C# for the Microsoft Graph
+                        APIs. The
+                        wrappers are designed with the option to cache data (item ids, urls etc) to improve performance
+                        by
+                        preventing unnecessary api calls."
+                    </div>
+                    <div class="source">
+                        - Github README
+                    </div>
+
+                </div>
+
+
+                <br>
+                <br>
+
+
+                <div class="skills">
+                    C#;.NET 8;xUnit framework;Factory Pattern;XML documentation comments;DocFX;Graph
+                    API;Sharepoint;OneDrive;MS
+                    Teams
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 
 
 </body>
 
 <script>
-  // var inners = { "#fgfbrands": $("#fgfbrands").clone() };
+    // var inners = { "#fgfbrands": $("#fgfbrands").clone() };
 
 
-  $(".my-carousel-item").click((event) => {
-    // todo, make it zoom in
-    let $el = $(event.target)
+    $(".my-carousel-item").click((event) => {
+        // todo, make it zoom in
+        let $el = $(event.target)
 
-    console.log($el)
-  })
+        console.log($el)
+    })
 
-  $(".filter").click((event) => {
-    // responsible for moving the carousel when filter button is clicked
-    let $el = $(event.currentTarget)
-    let p = $el.data("p");
-    let container_id = '#' + $el.data("container")
-    console.log(`project ${p} and container ${container_id}`)
+    $(".filter").click((event) => {
+        // responsible for moving the carousel when filter button is clicked
+        let $el = $(event.currentTarget)
+        let p = $el.data("p");
+        let container_id = '#' + $el.data("container")
+        console.log(`project ${p} and container ${container_id}`)
 
-    $(container_id).find(".filter").removeClass("active")
-    $el.addClass("active");
+        $(container_id).find(".filter").removeClass("active")
+        $el.addClass("active");
 
-    // $(container_id).find(".carousel-item").removeClass("active");
-    // console.log(`.carousel-item.${p}`)
-    let index = $(container_id).find(`.carousel-item.${p}`).first().index();
-    $(container_id).find('.carousel').carousel(index);
-
-
-
-    // let $template = inners[carousel_id]
-    // let $filtered_children = $template.find(".carousel-inner").first().find("." + p).clone()
-    // $(container_id).find(".carousel-inner").first().empty()
-    // $(container_id).find(".carousel-inner").first().append($filtered_children)
-    // $(container_id).find(".carousel-item").removeClass("active");
-    // $(container_id).find(".carousel-item").first().addClass("active")
-  })
-
-  $('.carousel').on('slide.bs.carousel', function (event) {
-    let $carousel = $(event.target).closest(".carousel")
-    console.log('Carousel moved to slide:', $(event.relatedTarget).data("p"));
-    let p_cur = $(event.target).find('.carousel-item').eq(event.from).data("p")
-    let project = $(event.relatedTarget).data("p");
-
-    if (p_cur === project) {
-      return;
-    }
-    let carousel_id = $carousel.attr('id')
-    console.log(project + carousel_id)
-
-    $carousel.siblings(".summaries").children().hide(500)
-    $carousel.siblings(".summaries").children("." + project).show(500)
-
-    $carousel.siblings(".filters").children().removeClass("active")
-    $carousel.siblings(".filters").children(`[data-p="${project}"]`).addClass("active")
+        // $(container_id).find(".carousel-item").removeClass("active");
+        // console.log(`.carousel-item.${p}`)
+        let index = $(container_id).find(`.carousel-item.${p}`).first().index();
+        $(container_id).find('.carousel').carousel(index);
 
 
 
+        // let $template = inners[carousel_id]
+        // let $filtered_children = $template.find(".carousel-inner").first().find("." + p).clone()
+        // $(container_id).find(".carousel-inner").first().empty()
+        // $(container_id).find(".carousel-inner").first().append($filtered_children)
+        // $(container_id).find(".carousel-item").removeClass("active");
+        // $(container_id).find(".carousel-item").first().addClass("active")
+    })
 
-  });
+    $('.carousel').on('slide.bs.carousel', function (event) {
+        let $carousel = $(event.target).closest(".carousel")
+        console.log('Carousel moved to slide:', $(event.relatedTarget).data("p"));
+        let p_cur = $(event.target).find('.carousel-item').eq(event.from).data("p")
+        let project = $(event.relatedTarget).data("p");
 
-  $(document).ready(function () {
-    console.log("creating the skills elements")
-    // preparing the links
-    $("a").append(`<i class="custom-link fa-solid fa-arrow-up-right-from-square"></i>`)
-    // setting up the skills labels
-    $(".skills").each(function () {
-      let skills = $(this).html().split(";").map((x) => x.trim())
-      $(this).empty();
-      console.log(skills)
-      skills.forEach((skill) => {
-        $(this).append(`
+        if (p_cur === project) {
+            return;
+        }
+        let carousel_id = $carousel.attr('id')
+        console.log(project + carousel_id)
+
+        $carousel.siblings(".summaries").children().hide(500)
+        $carousel.siblings(".summaries").children("." + project).show(500)
+
+        $carousel.siblings(".filters").children().removeClass("active")
+        $carousel.siblings(".filters").children(`[data-p="${project}"]`).addClass("active")
+
+
+
+
+    });
+
+    $(document).ready(function () {
+        console.log("creating the skills elements")
+        // preparing the links
+        $("a").append(`<i class="custom-link fa-solid fa-arrow-up-right-from-square"></i>`)
+        // setting up the skills labels
+        $(".skills").each(function () {
+            let skills = $(this).html().split(";").map((x) => x.trim())
+            $(this).empty();
+            console.log(skills)
+            skills.forEach((skill) => {
+                $(this).append(`
 
 <div class="skill">${skill}</div>
         
         `)
-      })
+            })
 
+        })
     })
-  })
 
 
 
