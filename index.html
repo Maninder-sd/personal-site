@@ -198,6 +198,60 @@
     .quote .source {
         text-align: right
     }
+
+    /* pr cards 
+    
+                        <div class="pr-card">
+                        <div class="name">Adding optional sp arg to closeness_centrality </div>
+                        <div class="issue-link">My proposal</div>
+                        <div class="pr-footer">
+                            <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8424">PR
+                                    #8424</a>
+                            </div>
+                            <div class="date">Dec 2025</div>
+                        </div>
+
+                    </div>
+                    
+                    */
+
+    .pr-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* auto auto auto;
+        1fr 1fr 1fr; */
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+    .pr-card {
+        /* width: 200px; */
+        padding: 10px;
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 20px;
+        ;
+    }
+
+    .name {
+        font-size: large;
+        font-weight: bold;
+        ;
+    }
+
+    .issue-link {}
+
+    .pr-footer {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
 </style>
 
 <body>
@@ -264,9 +318,10 @@
         <div class="summaries col-8">
             <div class="summary p1">
 
-                This custom canvas lets you draw rectangular card and render custom html (livestreams. videos or reports).
-                I have a video demoing how one can integrated my JS component into a .NET project to make a video wall 
-                that can display livestreams from machine vision models and live reports. 
+                This custom canvas lets you draw rectangular card and render custom html (livestreams. videos or
+                reports).
+                I have a video demoing how one can integrated my JS component into a .NET project to make a video wall
+                that can display livestreams from machine vision models and live reports.
                 <br>
                 <br>
                 <div class="d-flex flex-row align-items-center justify-content-around" style="width:100%">
@@ -322,7 +377,7 @@
         <button type="button" data-bs-target="#fgfbrandsIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div> -->
             <div class="carousel-inner ">
-                                <!-- p4 -->
+                <!-- p4 -->
                 <div class="carousel-item active p4" data-p="p4">
                     <div class="my-carousel-item ">
                         <iframe class="iframe-carousel"
@@ -409,26 +464,29 @@
             <div class="summary p4">
                 The <u>Cerebro Dashboard</u> project allows managers and senior leadership to place livestreams,
                 critical reports, and additional information on a video wall for easy access.
-                <br/>
-                <br/>
+                <br />
+                <br />
 
                 In this project, I developed a reusable canvas-like component that allows placement of rectangular
                 cards anywhere on the screen. You can add/customize the datasources easily. You can make the component
-                render your own custom video/report component. In fact, the canvas can be configured to render any custom
-                HTML component. 
-                
-                <a href="https://maninder-sd.github.io/mani-ui/canvas/example.html"
-                        target="_blank">Live Demo</a>;
-                
+                render your own custom video/report component. In fact, the canvas can be configured to render any
+                custom
+                HTML component.
 
-                <br/>
-                <br/>
-                To create this component, I successfully designed a backend to store the screen data and more importantly
-                successfully manage the UI/UX state of the canvas. The biggest challenge was designing a JS class that managed 
-                the complex states of the UI. The class could also be extended easily to implement new functionality that users requested. 
+                <a href="https://maninder-sd.github.io/mani-ui/canvas/example.html" target="_blank">Live Demo</a>;
 
-                <br/>
-                <br/>
+
+                <br />
+                <br />
+                To create this component, I successfully designed a backend to store the screen data and more
+                importantly
+                successfully manage the UI/UX state of the canvas. The biggest challenge was designing a JS class that
+                managed
+                the complex states of the UI. The class could also be extended easily to implement new functionality
+                that users requested.
+
+                <br />
+                <br />
 
 
                 <div class="skills">
@@ -558,51 +616,72 @@
                 <br>
                 <br>
 
-                <ul>
+                <div class="pr-grid">
 
-                    <li>
+                    <div class="pr-card">
                         <div class="name">Adding optional sp arg to closeness_centrality </div>
-                        <div class="issue-link">My proposal</div>
-                        <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8424">PR
-                                #8424</a>
+                        <div class="issue-link">Based on my proposal</div>
+                        <div class="pr-footer">
+                            <div class="date">Dec 2025</div>
+                            <div class="pr-link"><a target="_blank"
+                                    href="https://github.com/networkx/networkx/pull/8424">PR
+                                    #8424</a>
+                            </div>
                         </div>
-                        <div class="date">Dec 2025</div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="name">pos kwarg not recognized by display </div>
-                        <div class="issue-link"><a target="_blank"
-                                href="https://github.com/networkx/networkx/issues/8143">Issue
-                                #8143</a></div>
-                        <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8153">PR
-                                #8153</a>
-                        </div>
-                        <div class="date">July 2025</div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="name">support target parameter for generate_random_paths </div>
-                        <div class="issue-link"><a target="_blank"
-                                href="https://github.com/networkx/networkx/issues/8014">Issue
-                                #8014</a></div>
-                        <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8141">PR
-                                #8141</a>
-                        </div>
-                        <div class="date">July 2025</div>
-                    </li>
-                    <!--  -->
-                    <li>
-                        <div class="name">Unexpected behavior for subgraph monomorphisms with MultiGraph </div>
-                        <div class="issue-link"><a target="_blank"
-                                href="https://github.com/networkx/networkx/issues/7758">Issue
-                                #7758</a></div>
-                        <div class="pr-link"><a target="_blank" href="https://github.com/networkx/networkx/pull/8134">PR
-                                #8134</a>
-                        </div>
-                        <div class="date">July 2025</div>
-                    </li>
-                </ul>
 
+                    </div>
+                    <!--  -->
+                    <div class="pr-card">
+                        <div class="name">pos kwarg not recognized by display </div>
+                        <div class="issue-link">
+                            Based on <a target="_blank" href="https://github.com/networkx/networkx/issues/8143">Issue
+                                #8143</a></div>
+                        <div class="pr-footer">
+
+                            <div class="date">July 2025</div>
+                            <div class="pr-link"><a target="_blank"
+                                    href="https://github.com/networkx/networkx/pull/8153">PR
+                                    #8153</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--  -->
+                    <div class="pr-card">
+                        <div class="name">support target parameter for generate_random_paths </div>
+                        <div class="issue-link">
+                            Based on <a target="_blank" href="https://github.com/networkx/networkx/issues/8014">Issue
+                                #8014</a></div>
+
+                        <div class="pr-footer">
+                            <div class="date">July 2025</div>
+
+                            <div class="pr-link"><a target="_blank"
+                                    href="https://github.com/networkx/networkx/pull/8141">PR
+                                    #8141</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="pr-card">
+                        <div class="name">Unexpected behavior for subgraph monomorphisms with MultiGraph </div>
+                        <div class="issue-link">
+                            Based on <a target="_blank" href="https://github.com/networkx/networkx/issues/7758">Issue
+                                #7758</a></div>
+
+                        <div class="pr-footer">
+                            <div class="date">July 2025</div>
+                            <div class="pr-link">
+                                <a target="_blank" href="https://github.com/networkx/networkx/pull/8134">PR
+                                    #8134</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <br />
 
                 <div class="skills">
                     Python;numpy.py;matplotlib.py;Pytest;Unit testing;<a href="" target="_blank">Sphinx
